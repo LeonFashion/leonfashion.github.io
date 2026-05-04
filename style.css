@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #faf7f2;
+  color: #2b2118;
+}
+
+nav {
+  background: #1f1712;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.logo {
+  color: #d4af37;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 70px 12%;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.image-placeholder {
+  height: 260px;
+  background: #e8ded3;
+  border: 2px dashed #b89f84;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a6756;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #d4af37;
+  color: #1f1712;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 8px;
+}
