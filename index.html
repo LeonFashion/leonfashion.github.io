@@ -2,9 +2,58 @@
 <html>
 <head>
   <title>Leon Fashion</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1529636798458-92182e662485') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      background: #d4af37;
+      color: black;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to Leon Fashion</h1>
-  <p>Luxury bridal experience in Quito.</p>
+
+  <div class="hero">
+    <div class="overlay">
+      <h1>Leon Fashion</h1>
+      <p>Luxury Bridal Experience in Quito</p>
+      <a class="btn" href="https://wa.me/593XXXXXXXXX">Book via WhatsApp</a>
+    </div>
+  </div>
+
 </body>
 </html>
