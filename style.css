@@ -38,7 +38,7 @@ nav a:hover {
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("images/weddingdressbackground.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 60%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
