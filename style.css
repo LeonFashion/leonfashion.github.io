@@ -36,9 +36,9 @@ nav a:hover {
   height: 85vh;
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("images/cotopaxibackground.jpg");
+    url("images/weddingdressbackground.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 40%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
