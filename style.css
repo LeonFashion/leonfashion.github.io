@@ -77,9 +77,10 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 35px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
 }
 
 .card {
@@ -90,7 +91,7 @@ h2 {
 
 .card-img {
   width: 100%;
-  height: 380px;
+  height: 500px;
   object-fit: contain;
   border-radius: 12px;
   margin-bottom: 15px;
