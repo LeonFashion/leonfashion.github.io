@@ -20,6 +20,7 @@ nav a {
   margin-left: 22px;
   font-size: 16px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -38,64 +39,111 @@ nav a:hover {
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("images/weddingdressbackground.jpg");
   background-size: cover;
-  background-position: center 20%;
+  background-position: center center;
   background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+
   color: white;
 }
 
 .hero-box {
-  max-width: 800px;
+  max-width: 850px;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 64px;
   margin-bottom: 15px;
 }
 
 h2 {
-  font-size: 38px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .subtitle {
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-size: 24px;
+  margin-bottom: 35px;
 }
 
 .section {
-  padding: 70px 12%;
+  padding: 80px 12%;
   text-align: center;
 }
 
 .section p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
-/* GRID (desktop = 2 columns) */
+/* ABOUT US SECTION */
+
+.about-container {
+  margin: 60px auto 70px;
+  max-width: 850px;
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: #d4af37;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #2b2118;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 45px;
 }
+
+/* CARD */
 
 .card {
   background: transparent;
-  padding: 0;
   border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
 
 .card-img {
   width: 100%;
-  height: 500px; /* keep consistent height */
-  object-fit: cover; /* THIS is the key change */
-  border-radius: 12px;
-  margin-bottom: 15px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+
+  border-radius: 14px;
+  margin-bottom: 18px;
+
+  transition: transform 0.4s ease;
 }
+
+.card:hover .card-img {
+  transform: scale(1.04);
+}
+
+/* LINKS */
 
 .card-link,
 .card-link:visited,
@@ -116,62 +164,72 @@ h2 {
   color: #d4af37;
 }
 
-.image-placeholder {
-  height: 260px;
-  background: #e8ded3;
-  border: 2px dashed #b89f84;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #7a6756;
-  margin-bottom: 15px;
-}
+/* BUTTONS */
 
 .btn {
   background: #d4af37;
   color: #1f1712;
-  padding: 14px 28px;
+  padding: 14px 30px;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 40px;
   font-weight: bold;
   display: inline-block;
-  margin: 8px;
+  margin: 10px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn:hover {
   background: #c19b2e;
+  transform: translateY(-2px);
 }
+
+/* FOOTER */
 
 footer {
   background: #1f1712;
   color: white;
   text-align: center;
-  padding: 35px;
+  padding: 40px;
+  margin-top: 80px;
 }
 
 footer a {
   color: #d4af37;
+  text-decoration: none;
 }
+
+/* FLOATING WHATSAPP */
 
 .floating-whatsapp {
   position: fixed;
   bottom: 22px;
   right: 22px;
+
   background: #25D366;
   color: white;
+
   padding: 15px 18px;
+
   border-radius: 50%;
   text-decoration: none;
   font-size: 22px;
+
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+  z-index: 999;
 }
 
-/* MOBILE FIX (THIS is where it goes) */
+/* MOBILE */
+
 @media (max-width: 700px) {
+
   nav {
     text-align: center;
     justify-content: center;
+    padding: 15px;
   }
 
   nav a {
@@ -179,20 +237,48 @@ footer a {
     margin: 10px;
   }
 
+  .logo {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
   h1 {
-    font-size: 38px;
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 20px;
   }
 
   .section {
-    padding: 50px 8%;
+    padding: 60px 8%;
   }
 
-  /* 👇 THIS is the key mobile fix */
   .grid {
     grid-template-columns: 1fr;
+    gap: 35px;
   }
 
   .card-img {
-    height: 300px;
+    height: 380px;
+  }
+
+  .about-title {
+    font-size: 48px;
+  }
+
+  .about-text {
+    font-size: 17px;
+  }
+
+  .btn {
+    display: block;
+    width: fit-content;
+    margin: 12px auto;
   }
 }
