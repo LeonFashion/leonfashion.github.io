@@ -5,6 +5,10 @@ body {
   color: #2b2118;
 }
 
+.home-page {
+  font-family: "Parisienne", "Great Vibes", cursive;
+}
+
 nav {
   background: #1f1712;
   padding: 18px 40px;
@@ -18,8 +22,8 @@ nav a {
   color: white;
   text-decoration: none;
   margin-left: 22px;
-  font-size: 16px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 24px;
+  font-family: "Parisienne", "Great Vibes", cursive;
   transition: color 0.3s ease;
 }
 
@@ -29,8 +33,9 @@ nav a:hover {
 
 .logo {
   color: #d4af37;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
+  font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .hero {
@@ -39,14 +44,12 @@ nav a:hover {
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("images/weddingdressbackground.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 8%;
   background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   color: white;
 }
 
@@ -56,18 +59,21 @@ nav a:hover {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 76px;
   margin-bottom: 15px;
+  font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 52px;
   margin-bottom: 20px;
+  font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 34px;
   margin-bottom: 35px;
+  font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .section {
@@ -76,11 +82,9 @@ h2 {
 }
 
 .section p {
-  font-size: 18px;
+  font-size: 28px;
   line-height: 1.8;
 }
-
-/* ABOUT US SECTION */
 
 .about-container {
   margin: 60px auto 70px;
@@ -89,30 +93,33 @@ h2 {
 }
 
 .about-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
+  font-family: "Great Vibes", "Parisienne", cursive;
+  font-size: 70px;
   color: #d4af37;
   margin-bottom: 25px;
   font-weight: normal;
 }
 
 .about-text {
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: 30px;
+  line-height: 1.8;
   color: #2b2118;
   margin-bottom: 20px;
 }
 
-/* GRID */
-
-.grid {
+.grid,
+.home-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 45px;
 }
 
-/* CARD */
+.home-card-centered {
+  grid-column: 1 / 3;
+  width: 50%;
+  justify-self: center;
+}
 
 .card {
   background: transparent;
@@ -125,25 +132,19 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* IMAGE */
-
 .card-img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   object-position: center top;
-
   border-radius: 14px;
   margin-bottom: 18px;
-
   transition: transform 0.4s ease;
 }
 
 .card:hover .card-img {
   transform: scale(1.04);
 }
-
-/* LINKS */
 
 .card-link,
 .card-link:visited,
@@ -160,11 +161,30 @@ h2 {
   color: #2b2118;
 }
 
+.card-link h3 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.card-link p {
+  font-size: 26px;
+}
+
 .card-link:hover h3 {
   color: #d4af37;
 }
 
-/* BUTTONS */
+.image-placeholder {
+  height: 260px;
+  background: #e8ded3;
+  border: 2px dashed #b89f84;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a6756;
+  margin-bottom: 15px;
+}
 
 .btn {
   background: #d4af37;
@@ -175,7 +195,8 @@ h2 {
   font-weight: bold;
   display: inline-block;
   margin: 10px;
-
+  font-size: 24px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   transition:
     background 0.3s ease,
     transform 0.3s ease;
@@ -185,8 +206,6 @@ h2 {
   background: #c19b2e;
   transform: translateY(-2px);
 }
-
-/* FOOTER */
 
 footer {
   background: #1f1712;
@@ -201,28 +220,19 @@ footer a {
   text-decoration: none;
 }
 
-/* FLOATING WHATSAPP */
-
 .floating-whatsapp {
   position: fixed;
   bottom: 22px;
   right: 22px;
-
   background: #25D366;
   color: white;
-
   padding: 15px 18px;
-
   border-radius: 50%;
   text-decoration: none;
   font-size: 22px;
-
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
-
   z-index: 999;
 }
-
-/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -235,6 +245,7 @@ footer a {
   nav a {
     display: inline-block;
     margin: 10px;
+    font-size: 22px;
   }
 
   .logo {
@@ -243,25 +254,39 @@ footer a {
     text-align: center;
   }
 
+  .hero {
+    background-position: center 5%;
+  }
+
   h1 {
-    font-size: 42px;
+    font-size: 52px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 42px;
   }
 
   .subtitle {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .section {
     padding: 60px 8%;
   }
 
-  .grid {
+  .section p {
+    font-size: 24px;
+  }
+
+  .grid,
+  .home-grid {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .home-card-centered {
+    grid-column: auto;
+    width: 100%;
   }
 
   .card-img {
@@ -269,16 +294,17 @@ footer a {
   }
 
   .about-title {
-    font-size: 48px;
+    font-size: 56px;
   }
 
   .about-text {
-    font-size: 17px;
+    font-size: 24px;
   }
 
   .btn {
     display: block;
     width: fit-content;
     margin: 12px auto;
+    font-size: 18px;
   }
 }
