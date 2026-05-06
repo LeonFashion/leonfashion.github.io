@@ -75,12 +75,12 @@ h2 {
   line-height: 1.6;
 }
 
+/* GRID (desktop = 2 columns) */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 40px;
-}
 }
 
 .card {
@@ -168,6 +168,7 @@ footer a {
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
 }
 
+/* MOBILE FIX (THIS is where it goes) */
 @media (max-width: 700px) {
   nav {
     text-align: center;
@@ -185,6 +186,11 @@ footer a {
 
   .section {
     padding: 50px 8%;
+  }
+
+  /* 👇 THIS is the key mobile fix */
+  .grid {
+    grid-template-columns: 1fr;
   }
 
   .card-img {
