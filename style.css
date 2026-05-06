@@ -220,19 +220,32 @@ footer a {
   text-decoration: none;
 }
 
+/* FLOATING WHATSAPP BUTTON */
+
 .floating-whatsapp {
   position: fixed;
   bottom: 22px;
   right: 22px;
+  width: 65px;
+  height: 65px;
   background: #25D366;
   color: white;
-  padding: 15px 18px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 34px;
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  transition: transform 0.3s ease;
   z-index: 999;
 }
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -306,5 +319,11 @@ footer a {
     width: fit-content;
     margin: 12px auto;
     font-size: 18px;
+  }
+
+  .floating-whatsapp {
+    width: 58px;
+    height: 58px;
+    font-size: 30px;
   }
 }
