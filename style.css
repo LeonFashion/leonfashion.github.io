@@ -128,6 +128,17 @@ h2 {
   transition: transform 0.3s ease;
 }
 
+.card h3 {
+  font-size: 42px;
+  margin-bottom: 18px;
+  font-family: "Parisienne", "Great Vibes", cursive;
+}
+
+.card p {
+  font-size: 30px;
+  line-height: 1.7;
+}
+
 .card:hover {
   transform: translateY(-5px);
 }
