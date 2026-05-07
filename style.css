@@ -59,19 +59,19 @@ nav a:hover {
 }
 
 h1 {
-  font-size: 76px;
+  font-size: 58px;
   margin-bottom: 15px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 h2 {
-  font-size: 52px;
+  font-size: 42px;
   margin-bottom: 20px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .subtitle {
-  font-size: 34px;
+  font-size: 28px;
   margin-bottom: 35px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
@@ -82,7 +82,7 @@ h2 {
 }
 
 .section p {
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.8;
 }
 
@@ -94,14 +94,14 @@ h2 {
 
 .about-title {
   font-family: "Great Vibes", "Parisienne", cursive;
-  font-size: 70px;
+  font-size: 56px;
   color: #d4af37;
   margin-bottom: 25px;
   font-weight: normal;
 }
 
 .about-text {
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1.8;
   color: #2b2118;
   margin-bottom: 20px;
@@ -129,13 +129,13 @@ h2 {
 }
 
 .card h3 {
-  font-size: 42px;
+  font-size: 28px;
   margin-bottom: 18px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .card p {
-  font-size: 30px;
+  font-size: 18px;
   line-height: 1.7;
 }
 
@@ -173,12 +173,12 @@ h2 {
 }
 
 .card-link h3 {
-  font-size: 34px;
+  font-size: 28px;
   margin-bottom: 8px;
 }
 
 .card-link p {
-  font-size: 26px;
+  font-size: 18px;
 }
 
 .card-link:hover h3 {
@@ -206,7 +206,7 @@ h2 {
   font-weight: bold;
   display: inline-block;
   margin: 10px;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   transition:
     background 0.3s ease,
@@ -283,15 +283,15 @@ footer a {
   }
 
   h1 {
-    font-size: 52px;
+    font-size: 46px;
   }
 
   h2 {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .subtitle {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .section {
@@ -299,7 +299,7 @@ footer a {
   }
 
   .section p {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .grid,
@@ -318,11 +318,21 @@ footer a {
   }
 
   .about-title {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   .about-text {
-    font-size: 24px;
+    font-size: 18px;
+  }
+
+  .card h3,
+  .card-link h3 {
+    font-size: 28px;
+  }
+
+  .card p,
+  .card-link p {
+    font-size: 18px;
   }
 
   .btn {
