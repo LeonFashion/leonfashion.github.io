@@ -6,40 +6,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👗</text></svg>'>
-
-  <style>
-    .dress-card {
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .dress-image-wrap {
-      overflow: hidden;
-      border-radius: 12px;
-      background-color: #f5f5f5;
-    }
-
-    .dress-image-wrap img {
-      transition: transform 0.4s ease;
-    }
-
-    .dress-image-wrap:hover img {
-      transform: scale(1.08);
-    }
-
-    .dress-card h3 {
-      margin-top: 16px;
-      margin-bottom: 8px;
-      font-size: 22px;
-      color: #2b2118;
-    }
-
-    .dress-card p {
-      margin-top: 0;
-      font-size: 16px;
-      color: #5c4a3d;
-    }
-  </style>
 </head>
 
 <body>
@@ -127,19 +93,35 @@
     </div>
 
     <div class="card dress-card">
-      <div class="dress-image-wrap">
-        <img src="images/SpaghettiStrapFront.jpg" class="card-img" alt="Vestido Amelie">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="images/SpaghettiStrapFront.jpg" class="card-img" alt="Vestido Amelie frente">
+          </div>
+          <div class="flip-back">
+            <img src="images/SpaghettiStrapRear.jpg" class="card-img" alt="Vestido Amelie espalda">
+          </div>
+        </div>
       </div>
       <h3>Vestido Amelie</h3>
       <p>Diseño con tirantes delicados y un aire romántico.</p>
+      <p class="flip-note">Pasa el cursor sobre la imagen para ver la espalda.</p>
     </div>
 
     <div class="card dress-card">
-      <div class="dress-image-wrap">
-        <img src="images/StraplessFront.jpg" class="card-img" alt="Vestido Bianca">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="images/StraplessFront.jpg" class="card-img" alt="Vestido Bianca frente">
+          </div>
+          <div class="flip-back">
+            <img src="images/StraplessRear.jpg" class="card-img" alt="Vestido Bianca espalda">
+          </div>
+        </div>
       </div>
       <h3>Vestido Bianca</h3>
       <p>Un strapless elegante para una novia sofisticada.</p>
+      <p class="flip-note">Pasa el cursor sobre la imagen para ver la espalda.</p>
     </div>
 
   </div>
@@ -151,7 +133,7 @@
 </footer>
 
 <a class="floating-whatsapp"
-   href="https://wa.me/593993744247?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs.."
+   href="https://wa.me/593993744247?text=Hola%2C%20estoy%20interesada%20en%20los%20vestidos%20de%20novia%20de%20D%27Leon%20Designs."
    target="_blank">
    <i class="fa-brands fa-whatsapp"></i>
 </a>
