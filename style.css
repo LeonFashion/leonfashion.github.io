@@ -187,15 +187,16 @@ h2 {
 .card-img {
   width: 100%;
   height: 500px;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
   border-radius: 14px;
   margin-bottom: 18px;
   transition: transform 0.4s ease;
+  background-color: #f5f5f5;
 }
 
 .card:hover .card-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 /* LINKS */
@@ -333,22 +334,32 @@ footer a {
 
 .dress-image-wrap {
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
   background-color: #f5f5f5;
+  height: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .dress-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
   transition: transform 0.4s ease;
+  margin-bottom: 0;
 }
 
 .dress-image-wrap:hover img {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 
 .dress-card h3 {
-  margin-top: 16px;
-  margin-bottom: 8px;
-  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
   color: #2b2118;
 }
 
@@ -356,22 +367,24 @@ footer a {
   margin-top: 0;
   font-size: 22px;
   color: #5c4a3d;
+  line-height: 1.7;
 }
 
 /* FLIP CARDS */
 
 .flip-card {
   width: 100%;
-  height: 500px;
-  perspective: 1200px;
-  border-radius: 14px;
+  height: 760px;
+  perspective: 1400px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s ease;
+  transition: transform 0.9s ease;
   transform-style: preserve-3d;
 }
 
@@ -384,16 +397,21 @@ footer a {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .flip-front img,
 .flip-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
   border-radius: 14px;
   margin-bottom: 0;
 }
@@ -403,9 +421,9 @@ footer a {
 }
 
 .flip-note {
-  font-size: 16px !important;
+  font-size: 17px !important;
   color: #9a7b2f !important;
-  margin-top: 8px !important;
+  margin-top: 10px !important;
   font-style: italic;
 }
 
@@ -492,11 +510,13 @@ footer a {
   }
 
   .card-img {
-    height: 380px;
+    height: 520px;
   }
 
+  .dress-image-wrap,
   .flip-card {
-    height: 380px;
+    height: 520px;
+    padding: 12px;
   }
 
   .about-title {
