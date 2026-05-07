@@ -171,8 +171,8 @@ h2 {
 
 .card-img {
   width: 100%;
-  height: 500px;
-  object-fit: contain;
+  height: 520px;
+  object-fit: cover;
   object-position: center center;
   border-radius: 14px;
   background-color: #f5f5f5;
@@ -305,13 +305,13 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 940px;
+  min-height: 900px;
 }
 
 .dress-image-wrap,
 .flip-card {
   width: 100%;
-  height: 760px;
+  height: 680px;
   border-radius: 16px;
   background-color: #f5f5f5;
   flex-shrink: 0;
@@ -319,20 +319,15 @@ footer a {
 
 .dress-image-wrap {
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .dress-image-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   margin-bottom: 0;
-  border-radius: 14px;
+  border-radius: 16px;
   transition: transform 0.4s ease;
 }
 
@@ -341,7 +336,7 @@ footer a {
 }
 
 .dress-card h3 {
-  margin-top: 20px;
+  margin-top: 22px;
   margin-bottom: 10px;
   font-size: 30px;
   color: #2b2118;
@@ -358,6 +353,7 @@ footer a {
 
 .flip-card {
   perspective: 1400px;
+  overflow: hidden;
 }
 
 .flip-inner {
@@ -380,20 +376,15 @@ footer a {
   border-radius: 16px;
   overflow: hidden;
   background-color: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .flip-front img,
 .flip-back img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
-  border-radius: 14px;
+  border-radius: 16px;
   margin-bottom: 0;
 }
 
@@ -488,7 +479,7 @@ footer a {
   }
 
   .card-img {
-    height: 380px;
+    height: 420px;
   }
 
   .dress-card {
@@ -498,7 +489,6 @@ footer a {
   .dress-image-wrap,
   .flip-card {
     height: 560px;
-    padding: 12px;
   }
 
   .about-title {
