@@ -18,6 +18,22 @@ nav {
   flex-wrap: wrap;
 }
 
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.top-social-icon {
+  color: white;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.top-social-icon:hover {
+  color: #d4af37;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -31,14 +47,6 @@ nav a:hover {
   color: #d4af37;
 }
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-direction: row;
-  white-space: nowrap;
-}
-
 .logo {
   color: #d4af37;
   font-size: 34px;
@@ -46,28 +54,21 @@ nav a:hover {
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
-.top-social-icon {
-  color: #d4af37;
-  font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.top-social-icon:hover {
-  color: white;
-}
-
 .hero {
   height: 85vh;
+
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("images/weddingdressbackground.jpg");
+
   background-size: cover;
   background-position: center 8%;
   background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   color: white;
 }
@@ -78,19 +79,25 @@ nav a:hover {
 }
 
 h1 {
-  font-size: 58px;
+  font-size: 76px;
   margin-bottom: 15px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 52px;
   margin-bottom: 20px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
 
+h3 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  font-family: "Parisienne", "Great Vibes", cursive;
+}
+
 .subtitle {
-  font-size: 28px;
+  font-size: 34px;
   margin-bottom: 35px;
   font-family: "Parisienne", "Great Vibes", cursive;
 }
@@ -101,8 +108,8 @@ h2 {
 }
 
 .section p {
-  font-size: 24px;
-  line-height: 1.9;
+  font-size: 28px;
+  line-height: 1.8;
 }
 
 .about-container {
@@ -113,15 +120,15 @@ h2 {
 
 .about-title {
   font-family: "Great Vibes", "Parisienne", cursive;
-  font-size: 56px;
+  font-size: 70px;
   color: #d4af37;
   margin-bottom: 25px;
   font-weight: normal;
 }
 
 .about-text {
-  font-size: 24px;
-  line-height: 1.9;
+  font-size: 30px;
+  line-height: 1.8;
   color: #2b2118;
   margin-bottom: 20px;
 }
@@ -132,7 +139,6 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 45px;
-  align-items: stretch;
 }
 
 .home-card-centered {
@@ -141,28 +147,11 @@ h2 {
   justify-self: center;
 }
 
-.contact-card-centered {
-  grid-column: 1 / 3;
-  width: 50%;
-  justify-self: center;
-}
-
 .card {
   background: transparent;
-  border-radius: 14px;
+  border-radius: 28px;
   overflow: hidden;
   transition: transform 0.3s ease;
-}
-
-.card h3 {
-  font-size: 28px;
-  margin-bottom: 18px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-}
-
-.card p {
-  font-size: 22px;
-  line-height: 1.8;
 }
 
 .card:hover {
@@ -171,16 +160,31 @@ h2 {
 
 .card-img {
   width: 100%;
-  height: 520px;
+  height: 500px;
+
   object-fit: cover;
-  object-position: center center;
-  border-radius: 14px;
-  background-color: #f5f5f5;
+  object-position: center top;
+
+  border-radius: 28px;
+
+  margin-bottom: 18px;
+
   transition: transform 0.4s ease;
+
+  display: block;
+}
+
+.dress-image-wrap,
+.flip-card,
+.flip-front,
+.flip-back,
+.image-placeholder {
+  border-radius: 28px;
+  overflow: hidden;
 }
 
 .card:hover .card-img {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .card-link,
@@ -199,12 +203,12 @@ h2 {
 }
 
 .card-link h3 {
-  font-size: 28px;
+  font-size: 34px;
   margin-bottom: 8px;
 }
 
 .card-link p {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .card-link:hover h3 {
@@ -212,28 +216,39 @@ h2 {
 }
 
 .image-placeholder {
-  height: 260px;
+  height: 500px;
   background: #e8ded3;
   border: 2px dashed #b89f84;
-  border-radius: 14px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: #7a6756;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+
+  font-size: 26px;
+  font-family: "Parisienne", "Great Vibes", cursive;
 }
 
 .btn {
   background: #d4af37;
   color: #1f1712;
+
   padding: 14px 30px;
+
   text-decoration: none;
   border-radius: 40px;
+
   font-weight: bold;
   display: inline-block;
+
   margin: 10px;
-  font-size: 18px;
+
+  font-size: 24px;
+
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
   transition:
     background 0.3s ease,
     transform 0.3s ease;
@@ -250,8 +265,10 @@ footer {
   text-align: center;
   padding: 40px;
   margin-top: 80px;
-  font-size: 22px;
-  line-height: 1.8;
+}
+
+footer p {
+  font-size: 24px;
 }
 
 footer a {
@@ -260,107 +277,64 @@ footer a {
 }
 
 .footer-socials {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .footer-socials a {
-  color: #d4af37;
+  color: white;
   font-size: 30px;
-  margin: 0 10px;
-  text-decoration: none;
+  margin: 0 12px;
   transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: white;
-}
-
-.social-section {
-  margin-top: 70px;
-  text-align: center;
-}
-
-.social-icons {
-  margin-top: 25px;
-}
-
-.social-icons a {
   color: #d4af37;
-  font-size: 42px;
-  margin: 0 18px;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #1f1712;
-  transform: scale(1.12);
-}
+.floating-whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
 
-/* DRESS PAGE */
+  background: #25D366;
+  color: white;
 
-.dress-card {
-  overflow: visible;
-  text-align: center;
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 900px;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 34px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+  z-index: 999;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
-.dress-image-wrap,
-.flip-card {
-  width: 100%;
-  height: 680px;
-  border-radius: 16px;
-  background-color: #f5f5f5;
-  flex-shrink: 0;
-}
-
-.dress-image-wrap {
-  overflow: hidden;
-}
-
-.dress-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  margin-bottom: 0;
-  border-radius: 16px;
-  transition: transform 0.4s ease;
-}
-
-.dress-image-wrap:hover img {
-  transform: scale(1.02);
-}
-
-.dress-card h3 {
-  margin-top: 22px;
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #2b2118;
-  min-height: 40px;
-}
-
-.dress-card p {
-  margin-top: 0;
-  font-size: 22px;
-  color: #5c4a3d;
-  line-height: 1.7;
-  min-height: 75px;
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  background: #1ebe5d;
 }
 
 .flip-card {
-  perspective: 1400px;
-  overflow: hidden;
+  perspective: 1200px;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 100%;
-  transition: transform 0.9s ease;
+  height: 500px;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -371,56 +345,54 @@ footer a {
 .flip-front,
 .flip-back {
   position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: #f5f5f5;
-}
-
-.flip-front img,
-.flip-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 16px;
-  margin-bottom: 0;
+  backface-visibility: hidden;
 }
 
 .flip-back {
   transform: rotateY(180deg);
 }
 
+.flip-front img,
+.flip-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f5f5f5;
+}
+
 .flip-note {
-  font-size: 17px !important;
-  color: #9a7b2f !important;
-  margin-top: 10px !important;
-  font-style: italic;
-  min-height: 30px !important;
+  font-size: 20px;
+  color: #7a6756;
+  margin-top: 10px;
 }
 
-.floating-whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  width: 65px;
-  height: 65px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
+.social-section {
+  margin-top: 80px;
+}
+
+.social-icons {
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-size: 34px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
-  transition: transform 0.3s ease;
-  z-index: 999;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-.floating-whatsapp:hover {
-  transform: scale(1.1);
+.social-icons a {
+  color: #1f1712;
+  font-size: 48px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d4af37;
+}
+
+.contact-card-centered {
+  grid-column: 1 / 3;
+  width: 50%;
+  justify-self: center;
 }
 
 @media (max-width: 700px) {
@@ -437,9 +409,10 @@ footer a {
     font-size: 22px;
   }
 
-  .logo {
-    margin-bottom: 0;
-    text-align: center;
+  .logo-area {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .hero {
@@ -447,15 +420,19 @@ footer a {
   }
 
   h1 {
-    font-size: 46px;
+    font-size: 52px;
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 30px;
   }
 
   .subtitle {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .section {
@@ -463,7 +440,7 @@ footer a {
   }
 
   .section p {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .grid,
@@ -478,38 +455,18 @@ footer a {
     width: 100%;
   }
 
-  .card-img {
-    height: 420px;
-  }
-
-  .dress-card {
-    min-height: auto;
-  }
-
-  .dress-image-wrap,
-  .flip-card {
-    height: 560px;
+  .card-img,
+  .flip-inner,
+  .image-placeholder {
+    height: 380px;
   }
 
   .about-title {
-    font-size: 48px;
+    font-size: 56px;
   }
 
   .about-text {
-    font-size: 20px;
-  }
-
-  .card h3,
-  .card-link h3,
-  .dress-card h3 {
-    font-size: 28px;
-  }
-
-  .card p,
-  .card-link p,
-  .dress-card p {
-    font-size: 20px;
-    min-height: auto;
+    font-size: 24px;
   }
 
   .btn {
@@ -517,6 +474,10 @@ footer a {
     width: fit-content;
     margin: 12px auto;
     font-size: 18px;
+  }
+
+  .social-icons a {
+    font-size: 40px;
   }
 
   .floating-whatsapp {
