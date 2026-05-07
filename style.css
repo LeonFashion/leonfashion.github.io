@@ -37,6 +37,8 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-direction: row;
+  white-space: nowrap;
 }
 
 .logo {
@@ -449,8 +451,7 @@ footer a {
   }
 
   .logo {
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: 0;
     text-align: center;
   }
 
