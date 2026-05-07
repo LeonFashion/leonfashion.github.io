@@ -149,8 +149,11 @@ h3 {
 
 .card {
   background: transparent;
-  border-radius: 28px;
+
+  border-radius: 32px;
+
   overflow: hidden;
+
   transition: transform 0.3s ease;
 }
 
@@ -165,26 +168,40 @@ h3 {
   object-fit: cover;
   object-position: center top;
 
-  border-radius: 28px;
+  border-radius: 32px;
+
+  overflow: hidden;
 
   margin-bottom: 18px;
 
   transition: transform 0.4s ease;
 
   display: block;
+
+  background-color: #f5f5f5;
+}
+
+.card img {
+  border-radius: 32px;
 }
 
 .dress-image-wrap,
 .flip-card,
+.flip-inner,
 .flip-front,
 .flip-back,
 .image-placeholder {
-  border-radius: 28px;
+  border-radius: 32px;
   overflow: hidden;
 }
 
+.flip-front img,
+.flip-back img {
+  border-radius: 32px;
+}
+
 .card:hover .card-img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .card-link,
