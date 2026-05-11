@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-  background: #1f1712;
+  background: #000000;
   padding: 18px 40px;
   display: flex;
   justify-content: space-between;
@@ -322,7 +322,7 @@ h3 {
 }
 
 footer {
-  background: #1f1712;
+  background: #000000;
   color: white;
   text-align: center;
   padding: 40px;
