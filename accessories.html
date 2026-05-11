@@ -30,7 +30,7 @@
 
   <div class="logo-area">
 
-    <div class="logo">D'Leon Designs</div>
+    <a href="index.html" class="logo">D'Leon Designs</a>
 
     <a class="top-social-icon"
        href="https://www.instagram.com/designsdleon/"
@@ -46,8 +46,11 @@
 
   </div>
 
-  <div>
-    <a href="index.html">Inicio</a>
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
     <a href="dresses.html">Vestidos</a>
     <a href="veils.html">Velos</a>
     <a href="accessories.html">Accesorios</a>
@@ -123,7 +126,7 @@
 
     </div>
 
-        <div class="card">
+    <div class="card">
 
       <img src="images/Accessory5.jpg"
            class="card-img accessory-img"
@@ -136,8 +139,8 @@
       </p>
 
     </div>
-    
-        <div class="card">
+
+    <div class="card">
 
       <img src="images/Accessory6.jpg"
            class="card-img accessory-img"
@@ -146,7 +149,7 @@
       <h3>Horquillas Florales Elegantes</h3>
 
       <p>
-       Un accesorio romántico con detalles florales delicados que aporta elegancia y un toque natural a tu look bridal.
+        Un accesorio romántico con detalles florales delicados que aporta elegancia y un toque natural a tu look bridal.
       </p>
 
     </div>
@@ -166,7 +169,8 @@
 
   <p>
     WhatsApp:
-    <a href="https://wa.me/593993744247">
+    <a href="https://wa.me/593993744247?text=Hola%2C%20estoy%20interesada%20en%20los%20accesorios%20de%20D%27Leon%20Designs."
+       target="_blank">
       99 374 4247
     </a>
   </p>
@@ -190,8 +194,16 @@
 <a class="floating-whatsapp"
    href="https://wa.me/593993744247?text=Hola%2C%20estoy%20interesada%20en%20los%20accesorios%20de%20D%27Leon%20Designs."
    target="_blank">
+
   <i class="fa-brands fa-whatsapp"></i>
+
 </a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+</script>
 
 </body>
 </html>
