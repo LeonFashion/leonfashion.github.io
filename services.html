@@ -11,7 +11,8 @@
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💍</text></svg>'>
+  <link rel="icon"
+  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💍</text></svg>'>
 
 </head>
 
@@ -21,7 +22,7 @@
 
   <div class="logo-area">
 
-    <div class="logo">D'Leon Designs</div>
+    <a href="index.html" class="logo">D'Leon Designs</a>
 
     <a class="top-social-icon"
        href="https://www.instagram.com/designsdleon/"
@@ -39,8 +40,11 @@
 
   </div>
 
-  <div>
-    <a href="index.html">Inicio</a>
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
     <a href="dresses.html">Vestidos</a>
     <a href="veils.html">Velos</a>
     <a href="accessories.html">Accesorios</a>
@@ -92,6 +96,7 @@
       <a class="btn"
          href="https://calendly.com/designsdleon/30min"
          target="_blank">
+
         Reserva Ahora
       </a>
 
@@ -130,6 +135,7 @@
       <a class="btn"
          href="https://calendly.com/designsdleon/experiencia-d-leon-esencial-clone"
          target="_blank">
+
         Reserva Ahora
       </a>
 
@@ -182,6 +188,12 @@
   <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+</script>
 
 </body>
 </html>
