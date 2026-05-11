@@ -21,7 +21,7 @@
 
   <div class="logo-area">
 
-    <div class="logo">D'Leon Designs</div>
+    <a href="index.html" class="logo">D'Leon Designs</a>
 
     <a class="top-social-icon"
        href="https://www.instagram.com/designsdleon/"
@@ -39,8 +39,11 @@
 
   </div>
 
-  <div>
-    <a href="index.html">Inicio</a>
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
     <a href="dresses.html">Vestidos</a>
     <a href="veils.html">Velos</a>
     <a href="accessories.html">Accesorios</a>
@@ -165,6 +168,12 @@
   <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+</script>
 
 </body>
 </html>
