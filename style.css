@@ -25,7 +25,7 @@ nav {
 }
 
 .logo {
-  color: #d4af37;
+  color: #e0c46b;
   font-size: 34px;
   font-weight: bold;
   font-family: "Parisienne", "Great Vibes", cursive;
@@ -33,19 +33,19 @@ nav {
 }
 
 .top-social-icon {
-  color: white;
+  color: #e0c46b;
   font-size: 28px;
   transition: color 0.3s ease;
 }
 
 .top-social-icon:hover {
-  color: #d4af37;
+  color: white;
 }
 
 .menu-toggle {
   background: none;
   border: none;
-  color: #d4af37;
+  color: #e0c46b;
   font-size: 32px;
   cursor: pointer;
 }
@@ -68,7 +68,7 @@ nav {
 }
 
 .nav-menu a:hover {
-  color: #d4af37;
+  color: #e0c46b;
 }
 
 .show-menu {
@@ -138,7 +138,7 @@ h3 {
 .about-title {
   font-family: "Great Vibes", "Parisienne", cursive;
   font-size: 70px;
-  color: #d4af37;
+  color: #e0c46b;
   margin-bottom: 25px;
   font-weight: normal;
 }
@@ -282,7 +282,7 @@ h3 {
 }
 
 .card-link:hover h3 {
-  color: #d4af37;
+  color: #e0c46b;
 }
 
 .image-placeholder {
@@ -301,8 +301,8 @@ h3 {
 }
 
 .btn {
-  background: #d4af37;
-  color: #1f1712;
+  background: #e0c46b;
+  color: #000000;
   padding: 14px 30px;
   text-decoration: none;
   border-radius: 40px;
@@ -317,7 +317,7 @@ h3 {
 }
 
 .btn:hover {
-  background: #c19b2e;
+  background: #d4af37;
   transform: translateY(-2px);
 }
 
@@ -334,7 +334,7 @@ footer p {
 }
 
 footer a {
-  color: #d4af37;
+  color: #e0c46b;
   text-decoration: none;
 }
 
@@ -343,14 +343,14 @@ footer a {
 }
 
 .footer-socials a {
-  color: white;
+  color: #e0c46b;
   font-size: 30px;
   margin: 0 12px;
   transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #d4af37;
+  color: white;
 }
 
 .floating-whatsapp {
@@ -397,13 +397,13 @@ footer a {
 }
 
 .social-icons a {
-  color: #1f1712;
+  color: #000000;
   font-size: 48px;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #d4af37;
+  color: #e0c46b;
 }
 
 .contact-card-centered {
