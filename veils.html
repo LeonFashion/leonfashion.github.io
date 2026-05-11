@@ -10,7 +10,8 @@
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💍</text></svg>'>
+  <link rel="icon"
+  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💍</text></svg>'>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
   <div class="logo-area">
 
-    <div class="logo">D'Leon Designs</div>
+    <a href="index.html" class="logo">D'Leon Designs</a>
 
     <a class="top-social-icon"
        href="https://www.instagram.com/designsdleon/"
@@ -35,8 +36,11 @@
 
   </div>
 
-  <div>
-    <a href="index.html">Inicio</a>
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
     <a href="dresses.html">Vestidos</a>
     <a href="veils.html">Velos</a>
     <a href="accessories.html">Accesorios</a>
@@ -57,56 +61,75 @@
   <div class="grid">
 
     <div class="card">
+
       <img src="images/Velos1.jpg"
            class="card-img"
            alt="Velo Clásico"
-           style="object-fit: contain; object-position: center center; background-color: #f5f5f5;">
+           style="object-fit: contain;
+                  object-position: center center;
+                  background-color: #f5f5f5;">
 
       <h3>Velo Clásico</h3>
 
       <p>
         Un diseño elegante y atemporal para una novia sofisticada.
       </p>
+
     </div>
 
     <div class="card">
+
       <img src="images/Velos2.jpg"
            class="card-img"
            alt="Velo Romance"
-           style="object-fit: contain; object-position: center center; background-color: #f5f5f5;">
+           style="object-fit: contain;
+                  object-position: center center;
+                  background-color: #f5f5f5;">
 
       <h3>Velo Romance</h3>
 
       <p>
         Encaje delicado y caída suave para una apariencia romántica.
       </p>
+
     </div>
 
     <div class="card">
+
       <img src="images/Velos3.jpg"
            class="card-img"
            alt="Velo Elegance"
-           style="object-fit: contain; object-position: center center; background-color: #f5f5f5;">
+           style="object-fit: contain;
+                  object-position: center center;
+                  background-color: #f5f5f5;">
 
       <h3>Velo Elegance</h3>
 
       <p>
         Un velo sofisticado pensado para complementar un look bridal refinado.
       </p>
+
     </div>
 
     <div class="card">
+
       <img src="images/Velos4.jpg"
            class="card-img"
            alt="Velo Cascada"
-           style="object-fit: contain; object-position: center center; background-color: #f5f5f5;">
+           style="object-fit: contain;
+                  object-position: center center;
+                  background-color: #f5f5f5;">
 
       <h3>Velo Cascada</h3>
 
       <p>
-       Un velo con caída suave y elegante que aporta movimiento, romanticismo y un toque sofisticado a tu look bridal.
+        Un velo con caída suave y elegante que aporta movimiento,
+        romanticismo y un toque sofisticado a tu look bridal.
       </p>
+
     </div>
+
+  </div>
 
 </section>
 
@@ -123,6 +146,7 @@
     WhatsApp:
     <a href="https://wa.me/593993744247?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20velos%20de%20D%27Leon%20Designs."
        target="_blank">
+
       99 374 4247
     </a>
   </p>
@@ -150,6 +174,12 @@
   <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+</script>
 
 </body>
 </html>
