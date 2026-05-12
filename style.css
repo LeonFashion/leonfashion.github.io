@@ -16,6 +16,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo-area {
@@ -48,21 +50,36 @@ nav {
   color: #e0c46b;
   font-size: 32px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.menu-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* FLOATING POPUP MENU */
 
 .nav-menu {
   display: none;
-  width: 100%;
+  position: absolute;
+  top: 78px;
+  right: 40px;
+  background: #000000;
+  border: 1px solid #e0c46b;
+  border-radius: 24px;
+  padding: 24px 38px;
   text-align: center;
-  margin-top: 18px;
+  z-index: 2000;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  min-width: 240px;
 }
 
 .nav-menu a {
   display: block;
   color: white;
   text-decoration: none;
-  font-size: 28px;
-  margin: 14px 0;
+  font-size: 30px;
+  margin: 16px 0;
   font-family: "Parisienne", "Great Vibes", cursive;
   transition: color 0.3s ease;
 }
@@ -430,9 +447,17 @@ footer a {
     margin-top: 8px;
   }
 
+  .nav-menu {
+    top: 85px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 72%;
+    padding: 24px 20px;
+  }
+
   .nav-menu a {
     font-size: 26px;
-    margin: 12px 0;
+    margin: 14px 0;
   }
 
   .hero {
