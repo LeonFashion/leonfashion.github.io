@@ -4,17 +4,44 @@
 
   <title>Contacto | D'Leon Designs</title>
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer' ? '&l='+l : '';
+
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      f.parentNode.insertBefore(j,f);
+
+    })(window,document,'script','dataLayer','GTM-MMBTLQ2B');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <link rel="stylesheet" href="style.css">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
 
-  gtag('config', 'G-RLLWJSPPRX');
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-RLLWJSPPRX');
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
 
@@ -27,6 +54,17 @@
 </head>
 
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-MMBTLQ2B"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav>
 
@@ -81,8 +119,6 @@
 
   <div class="grid">
 
-    <!-- WHATSAPP -->
-
     <div class="card">
 
       <h3>WhatsApp</h3>
@@ -101,8 +137,6 @@
 
     </div>
 
-    <!-- CORREO -->
-
     <div class="card">
 
       <h3>Correo</h3>
@@ -119,8 +153,6 @@
       </p>
 
     </div>
-
-    <!-- UBICACION -->
 
     <div class="card contact-card-centered">
 
