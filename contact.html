@@ -1,38 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-  <title>Contacto | D'Leon Designs</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
 
-  <!-- Google Tag Manager -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contacto | D'Leon Designs Quito</title>
+
+  <meta
+    name="description"
+    content="Contacta a D'Leon Designs en Quito para reservar una experiencia bridal privada, solicitar información sobre vestidos, velos, accesorios y servicios."
+  >
+
+
+  <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"
+  >
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       ICONS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+
+  <!-- =====================================================
+       MAIN STYLESHEET
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- =====================================================
+       GOOGLE TAG MANAGER
+  ====================================================== -->
+
   <script>
     (function(w,d,s,l,i){
+
       w[l]=w[l]||[];
+
       w[l].push({
         'gtm.start': new Date().getTime(),
         event:'gtm.js'
       });
 
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer' ? '&l='+l : '';
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
 
       j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
 
       f.parentNode.insertBefore(j,f);
 
     })(window,document,'script','dataLayer','GTM-MMBTLQ2B');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <link rel="stylesheet" href="style.css">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"
+  ></script>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer =
+      window.dataLayer || [];
 
     function gtag(){
       dataLayer.push(arguments);
@@ -40,152 +122,706 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-RLLWJSPPRX');
+    gtag(
+      'config',
+      'G-RLLWJSPPRX'
+    );
+
   </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link rel="icon"
-  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💍</text></svg>'>
 
 </head>
 
-<body>
 
-<!-- Google Tag Manager (noscript) -->
+<body class="contact-page">
+
+
+<!-- =========================================================
+     GOOGLE TAG MANAGER — NOSCRIPT
+========================================================= -->
+
 <noscript>
+
   <iframe
     src="https://www.googletagmanager.com/ns.html?id=GTM-MMBTLQ2B"
     height="0"
     width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
+    style="display:none;visibility:hidden"
+  ></iframe>
+
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<nav>
 
-  <div class="logo-area">
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <a href="index.html" class="logo">D'Leon Designs</a>
+<header
+  class="site-header"
+  id="siteHeader"
+>
 
-    <a class="top-social-icon"
-       href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+  <div class="nav-container">
 
-      <i class="fa-brands fa-instagram"></i>
+
+    <!-- BRAND -->
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="D'Leon Designs - Inicio"
+    >
+
+      <span class="brand-name">
+        D'Leon Designs
+      </span>
+
+      <span class="brand-subtitle">
+        Private Bridal Studio
+      </span>
 
     </a>
 
-    <a class="top-social-icon"
-       href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
 
-      <i class="fa-brands fa-tiktok"></i>
+    <!-- DESKTOP NAV -->
 
-    </a>
+    <nav
+      class="desktop-nav"
+      aria-label="Navegación principal"
+    >
 
-  </div>
-
-  <button class="menu-toggle" onclick="toggleMenu()">
-
-    <i class="fa-solid fa-bars"></i>
-
-  </button>
-
-  <div class="nav-menu" id="navMenu">
-
-    <a href="dresses.html">Vestidos</a>
-    <a href="veils.html">Velos</a>
-    <a href="accessories.html">Accesorios</a>
-    <a href="services.html">Servicios</a>
-    <a href="contact.html">Contacto</a>
-    <a href="about.html">Nuestra Esencia</a>
-
-  </div>
-
-</nav>
-
-<section class="section">
-
-  <h1>Contáctanos</h1>
-
-  <p>
-    Agenda tu experiencia bridal privada y recibe atención personalizada.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-
-      <h3>WhatsApp</h3>
-
-      <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-
-        <a href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs."
-           target="_blank"
-           style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-
-          98 536 5883
-
-        </a>
-
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Correo</h3>
-
-      <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-
-        <a href="mailto:designsdleon@gmail.com"
-           style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-
-          designsdleon@gmail.com
-
-        </a>
-
-      </p>
-
-    </div>
-
-    <div class="card contact-card-centered">
-
-      <h3>Ubicación</h3>
-
-      <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-
-        La Carolina, Quito, Ecuador
-
-      </p>
-
-    </div>
-
-  </div>
-
-  <div class="social-section">
-
-    <h2>Nuestras Redes</h2>
-
-    <div class="social-icons">
-
-      <a href="https://www.instagram.com/designsdleon/"
-         target="_blank">
-
-        <i class="fa-brands fa-instagram"></i>
-
+      <a href="dresses.html">
+        Vestidos
       </a>
 
-      <a href="https://www.tiktok.com/@dleondesigns"
-         target="_blank">
+      <a href="veils.html">
+        Velos
+      </a>
 
-        <i class="fa-brands fa-tiktok"></i>
+      <a href="accessories.html">
+        Accesorios
+      </a>
 
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a
+        href="contact.html"
+        class="active"
+      >
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+      <div class="header-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de D'Leon Designs"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok de D'Leon Designs"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="header-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar cita
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <nav aria-label="Navegación móvil">
+
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <div class="mobile-menu-footer">
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="btn btn-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
+
+
+      <div class="mobile-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     CONTACT HERO
+========================================================= -->
+
+<section class="contact-page-hero">
+
+  <div
+    class="section-container contact-page-hero-inner reveal"
+  >
+
+    <p class="eyebrow">
+      Hablemos
+    </p>
+
+    <h1>
+      Contáctanos
+    </h1>
+
+    <p>
+      Agenda tu experiencia bridal privada, consulta sobre
+      nuestra colección o escríbenos si tienes alguna pregunta.
+      Estamos aquí para ayudarte a comenzar.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT OPTIONS
+========================================================= -->
+
+<section class="section contact-options-section">
+
+  <div class="section-container">
+
+
+    <div class="catalog-intro reveal">
+
+      <p class="eyebrow">
+        Estamos para ayudarte
+      </p>
+
+      <h2>
+        Elige la forma
+        <span>más cómoda para ti.</span>
+      </h2>
+
+      <p>
+        Puedes escribirnos directamente por WhatsApp, correo
+        electrónico o visitarnos con cita previa en La Carolina,
+        Quito.
+      </p>
+
+    </div>
+
+
+
+    <div class="contact-options-grid">
+
+
+      <!-- =================================================
+           WHATSAPP
+      ================================================== -->
+
+      <article class="contact-option-card reveal">
+
+        <div class="contact-option-icon">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+        </div>
+
+
+        <span class="contact-option-number">
+          01
+        </span>
+
+
+        <p class="eyebrow">
+          Mensajería Directa
+        </p>
+
+
+        <h3>
+          WhatsApp
+        </h3>
+
+
+        <p>
+          La forma más rápida de consultar sobre vestidos,
+          disponibilidad, experiencias y citas.
+        </p>
+
+
+        <a
+          href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+          class="contact-option-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          +593 98 536 5883
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+
+      <!-- =================================================
+           EMAIL
+      ================================================== -->
+
+      <article class="contact-option-card reveal">
+
+        <div class="contact-option-icon">
+
+          <i class="fa-regular fa-envelope"></i>
+
+        </div>
+
+
+        <span class="contact-option-number">
+          02
+        </span>
+
+
+        <p class="eyebrow">
+          Correo Electrónico
+        </p>
+
+
+        <h3>
+          Escríbenos
+        </h3>
+
+
+        <p>
+          Ideal para consultas con más detalle o información
+          que prefieras compartir por correo.
+        </p>
+
+
+        <a
+          href="mailto:designsdleon@gmail.com"
+          class="contact-option-link"
+        >
+          designsdleon@gmail.com
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+
+      <!-- =================================================
+           LOCATION
+      ================================================== -->
+
+      <article class="contact-option-card reveal">
+
+        <div class="contact-option-icon">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+        </div>
+
+
+        <span class="contact-option-number">
+          03
+        </span>
+
+
+        <p class="eyebrow">
+          Nuestra Ubicación
+        </p>
+
+
+        <h3>
+          La Carolina
+        </h3>
+
+
+        <p>
+          Quito, Ecuador. Las experiencias bridal se realizan
+          únicamente con cita previa.
+        </p>
+
+
+        <span class="contact-option-link static-contact-link">
+          La Carolina · Quito
+        </span>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BOOKING SECTION
+========================================================= -->
+
+<section class="contact-booking-section">
+
+  <div class="section-container contact-booking-grid">
+
+
+    <div class="contact-booking-copy reveal">
+
+      <p class="eyebrow">
+        Reserva tu experiencia
+      </p>
+
+      <h2>
+        ¿Lista para comenzar
+        <span>tu búsqueda?</span>
+      </h2>
+
+      <p>
+        Puedes reservar directamente una cita privada
+        para conocer nuestra colección y vivir la experiencia
+        D'Leon con atención personalizada.
+      </p>
+
+
+      <div class="contact-booking-actions">
+
+        <a
+          href="https://calendly.com/designsdleon/30min"
+          class="btn btn-dark"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendar cita
+        </a>
+
+        <a
+          href="services.html"
+          class="text-link"
+        >
+          Conocer las experiencias
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="contact-booking-details reveal">
+
+      <div class="booking-detail">
+
+        <span>
+          01
+        </span>
+
+        <div>
+
+          <h3>
+            Selecciona tu cita
+          </h3>
+
+          <p>
+            Elige una fecha disponible que funcione para ti.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="booking-detail">
+
+        <span>
+          02
+        </span>
+
+        <div>
+
+          <h3>
+            Cuéntanos tu estilo
+          </h3>
+
+          <p>
+            Comparte cualquier detalle que nos ayude
+            a preparar mejor tu experiencia.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="booking-detail">
+
+        <span>
+          03
+        </span>
+
+        <div>
+
+          <h3>
+            Vive la experiencia
+          </h3>
+
+          <p>
+            Ven a tu cita y disfruta el proceso con tranquilidad.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SOCIAL SECTION
+========================================================= -->
+
+<section class="contact-social-section">
+
+  <div class="section-container">
+
+    <div class="contact-social-inner reveal">
+
+      <div>
+
+        <p class="eyebrow">
+          Síguenos
+        </p>
+
+        <h2>
+          Descubre más de
+          <span>D'Leon Designs.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="contact-social-links">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <i class="fa-brands fa-instagram"></i>
+
+          <div>
+
+            <span>
+              Instagram
+            </span>
+
+            <strong>
+              @designsdleon
+            </strong>
+
+          </div>
+
+          <span class="social-arrow">
+            →
+          </span>
+
+        </a>
+
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <i class="fa-brands fa-tiktok"></i>
+
+          <div>
+
+            <span>
+              TikTok
+            </span>
+
+            <strong>
+              @dleondesigns
+            </strong>
+
+          </div>
+
+          <span class="social-arrow">
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="bridal-cta">
+
+  <div class="bridal-cta-inner reveal">
+
+    <p class="eyebrow">
+      Tu momento comienza aquí
+    </p>
+
+    <h2>
+      Nos encantará
+      <span>conocerte.</span>
+    </h2>
+
+    <p>
+      Escríbenos o reserva directamente tu experiencia
+      bridal privada con D'Leon Designs en Quito.
+    </p>
+
+
+    <div class="cta-actions">
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20quiero%20agendar%20una%20experiencia%20bridal%20con%20D%27Leon%20Designs."
+        class="btn btn-light"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Escribir por WhatsApp
+      </a>
+
+
+      <a
+        href="https://calendly.com/designsdleon/30min"
+        class="btn btn-outline-light"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Agendar cita
       </a>
 
     </div>
@@ -194,72 +830,194 @@
 
 </section>
 
-<footer>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+</main>
 
-    Correo:
 
-    <a href="mailto:designsdleon@gmail.com"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
 
-      designsdleon@gmail.com
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-    </a>
+<footer class="site-footer">
 
-  </p>
+  <div class="section-container footer-grid">
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
 
-    WhatsApp:
+    <!-- BRAND -->
 
-    <a href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs."
-       target="_blank"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+    <div class="footer-brand">
 
-      98 536 5883
+      <a
+        href="index.html"
+        class="footer-logo"
+      >
+        D'Leon Designs
+      </a>
 
-    </a>
+      <p>
+        Private Bridal Studio
+      </p>
 
-  </p>
+      <span>
+        Quito, Ecuador
+      </span>
 
-  <div class="footer-socials">
+    </div>
 
-    <a href="https://www.instagram.com/designsdleon/"
-       target="_blank">
 
-      <i class="fa-brands fa-instagram"></i>
 
-    </a>
+    <!-- EXPLORE -->
 
-    <a href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
+    <div class="footer-column">
 
-      <i class="fa-brands fa-tiktok"></i>
+      <h3>
+        Explora
+      </h3>
 
-    </a>
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+    </div>
+
+
+
+    <!-- D'LEON -->
+
+    <div class="footer-column">
+
+      <h3>
+        D'Leon
+      </h3>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <div class="footer-column footer-contact">
+
+      <h3>
+        Reserva
+      </h3>
+
+      <a href="mailto:designsdleon@gmail.com">
+        designsdleon@gmail.com
+      </a>
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        +593 98 536 5883
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="section-container footer-bottom">
+
+    <p>
+      © <span id="currentYear"></span> D'Leon Designs.
+      Todos los derechos reservados.
+    </p>
+
+
+    <div class="footer-social-icons">
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de D'Leon Designs"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok de D'Leon Designs"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+    </div>
 
   </div>
 
 </footer>
 
-<a class="floating-whatsapp"
-   href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs."
-   target="_blank">
 
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar D'Leon Designs por WhatsApp"
+>
   <i class="fa-brands fa-whatsapp"></i>
-
 </a>
 
-<script>
 
-  function toggleMenu() {
 
-    document.getElementById("navMenu").classList.toggle("show-menu");
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
-  }
+<script src="js/script.js"></script>
 
-</script>
 
 </body>
+
 </html>
