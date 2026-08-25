@@ -1,6 +1,11 @@
 /* =========================================================
    D'LEON DESIGNS
-   LUXURY BRIDAL DESIGN SYSTEM
+   MASTER LUXURY BRIDAL DESIGN SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   01. DESIGN TOKENS
 ========================================================= */
 
 :root {
@@ -8,11 +13,13 @@
   --ivory: #f8f5ef;
   --ivory-soft: #fcfaf6;
   --cream: #f1ece3;
+  --cream-dark: #e7dfd4;
 
   --white: #ffffff;
 
   --espresso: #241d19;
   --espresso-soft: #3b312b;
+  --espresso-light: #554942;
 
   --text: #2f2925;
   --text-soft: #746b64;
@@ -36,16 +43,21 @@
   --shadow-medium:
     0 22px 52px rgba(47, 41, 37, 0.10);
 
+  --shadow-large:
+    0 30px 70px rgba(47, 41, 37, 0.13);
+
   --transition:
     0.35s ease;
 }
 
 
 /* =========================================================
-   RESET
+   02. RESET
 ========================================================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -61,7 +73,6 @@ body {
   overflow-x: hidden;
 
   background: var(--ivory);
-
   color: var(--text);
 
   font-family:
@@ -89,13 +100,11 @@ select {
 
 img {
   display: block;
-
   max-width: 100%;
 }
 
 a {
   color: inherit;
-
   text-decoration: none;
 }
 
@@ -103,9 +112,13 @@ button {
   font: inherit;
 }
 
+main {
+  display: block;
+}
+
 
 /* =========================================================
-   TYPOGRAPHY
+   03. TYPOGRAPHY
 ========================================================= */
 
 h1,
@@ -126,10 +139,9 @@ h4 {
 
 h1 {
   font-size:
-    clamp(4.2rem, 8vw, 7.4rem);
+    clamp(4rem, 8vw, 7.4rem);
 
   line-height: 0.94;
-
   letter-spacing: -0.035em;
 }
 
@@ -138,24 +150,28 @@ h2 {
     clamp(3rem, 5vw, 5rem);
 
   line-height: 1;
-
   letter-spacing: -0.025em;
 }
 
 h3 {
   font-size:
-    clamp(2rem, 3vw, 2.6rem);
+    clamp(1.9rem, 3vw, 2.6rem);
 
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 p {
   color: var(--text-soft);
 }
 
+::selection {
+  background: var(--champagne-soft);
+  color: var(--espresso);
+}
+
 
 /* =========================================================
-   GENERAL CONTAINERS
+   04. GLOBAL LAYOUT
 ========================================================= */
 
 .section-container {
@@ -167,7 +183,7 @@ p {
 
 .section {
   padding:
-    110px 7%;
+    120px 24px;
 }
 
 .section-heading {
@@ -196,13 +212,12 @@ p {
   margin: 0 auto;
 
   font-size: 1rem;
-
   line-height: 1.9;
 }
 
 
 /* =========================================================
-   EYEBROW
+   05. EYEBROWS
 ========================================================= */
 
 .eyebrow {
@@ -211,11 +226,9 @@ p {
   color: var(--champagne-dark);
 
   font-size: 0.72rem;
-
   font-weight: 600;
 
   letter-spacing: 0.19em;
-
   text-transform: uppercase;
 }
 
@@ -225,7 +238,7 @@ p {
 
 
 /* =========================================================
-   BUTTONS
+   06. BUTTONS
 ========================================================= */
 
 .btn {
@@ -249,11 +262,9 @@ p {
   cursor: pointer;
 
   font-size: 0.75rem;
-
   font-weight: 600;
 
   letter-spacing: 0.09em;
-
   text-transform: uppercase;
 
   transition:
@@ -279,7 +290,7 @@ p {
 }
 
 .btn-light:hover {
-  background: white;
+  background: var(--white);
 
   box-shadow:
     0 14px 32px
@@ -289,53 +300,38 @@ p {
 .btn-dark {
   background: var(--espresso);
 
-  color: white;
+  color: var(--white);
 
   border-color: var(--espresso);
 }
 
 .btn-dark:hover {
-  background: #372c26;
+  background: var(--champagne-dark);
 
-  border-color: #372c26;
+  border-color:
+    var(--champagne-dark);
 }
 
 .btn-outline-light {
   background: transparent;
 
-  color: white;
+  color: var(--white);
 
   border-color:
     rgba(255, 255, 255, 0.6);
 }
 
 .btn-outline-light:hover {
-  background: white;
+  background: var(--white);
 
   color: var(--espresso);
 
-  border-color: white;
-}
-
-
-/* Legacy button support */
-.btn.primary {
-  background: var(--champagne);
-
-  color: var(--espresso);
-}
-
-.btn.secondary {
-  background: transparent;
-
-  color: var(--espresso);
-
-  border-color: var(--espresso);
+  border-color: var(--white);
 }
 
 
 /* =========================================================
-   TEXT LINKS
+   07. TEXT LINKS
 ========================================================= */
 
 .text-link {
@@ -345,16 +341,12 @@ p {
 
   gap: 10px;
 
-  margin-top: 20px;
-
   color: var(--espresso);
 
-  font-size: 0.78rem;
-
+  font-size: 0.75rem;
   font-weight: 600;
 
   letter-spacing: 0.09em;
-
   text-transform: uppercase;
 }
 
@@ -370,12 +362,11 @@ p {
 
 
 /* =========================================================
-   NEW HEADER
+   08. HEADER
 ========================================================= */
 
 .site-header {
   width: 100%;
-
   min-height: 94px;
 
   position: sticky;
@@ -391,6 +382,9 @@ p {
     1px solid var(--border);
 
   backdrop-filter:
+    blur(16px);
+
+  -webkit-backdrop-filter:
     blur(16px);
 
   transition:
@@ -425,7 +419,7 @@ p {
 
 
 /* =========================================================
-   NEW BRAND
+   09. BRAND
 ========================================================= */
 
 .brand {
@@ -447,7 +441,6 @@ p {
     serif;
 
   font-size: 2rem;
-
   font-weight: 600;
 
   letter-spacing: -0.02em;
@@ -459,7 +452,6 @@ p {
   color: var(--champagne-dark);
 
   font-size: 0.57rem;
-
   font-weight: 600;
 
   letter-spacing: 0.22em;
@@ -469,7 +461,7 @@ p {
 
 
 /* =========================================================
-   DESKTOP NAV
+   10. DESKTOP NAVIGATION
 ========================================================= */
 
 .desktop-nav {
@@ -485,12 +477,12 @@ p {
 .desktop-nav a {
   position: relative;
 
-  padding: 10px 0;
+  padding:
+    10px 0;
 
   color: var(--espresso-soft);
 
   font-size: 0.76rem;
-
   font-weight: 500;
 
   letter-spacing: 0.055em;
@@ -518,17 +510,19 @@ p {
     width var(--transition);
 }
 
-.desktop-nav a:hover {
+.desktop-nav a:hover,
+.desktop-nav a.active {
   color: var(--champagne-dark);
 }
 
-.desktop-nav a:hover::after {
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
   width: 100%;
 }
 
 
 /* =========================================================
-   HEADER ACTIONS
+   11. HEADER ACTIONS
 ========================================================= */
 
 .header-actions {
@@ -570,7 +564,7 @@ p {
   padding:
     11px 18px;
 
-  color: white;
+  color: var(--white);
 
   background: var(--espresso);
 
@@ -578,7 +572,6 @@ p {
     1px solid var(--espresso);
 
   font-size: 0.68rem;
-
   font-weight: 600;
 
   letter-spacing: 0.08em;
@@ -587,13 +580,15 @@ p {
 
   transition:
     background var(--transition),
+    border-color var(--transition),
     transform var(--transition);
 }
 
 .header-cta:hover {
   background: var(--champagne-dark);
 
-  border-color: var(--champagne-dark);
+  border-color:
+    var(--champagne-dark);
 
   transform:
     translateY(-2px);
@@ -601,7 +596,7 @@ p {
 
 
 /* =========================================================
-   HAMBURGER
+   12. HAMBURGER
 ========================================================= */
 
 .menu-toggle {
@@ -616,6 +611,8 @@ p {
   justify-content: center;
 
   gap: 6px;
+
+  padding: 0;
 
   border: none;
 
@@ -651,7 +648,7 @@ p {
 
 
 /* =========================================================
-   MOBILE MENU
+   13. MOBILE MENU
 ========================================================= */
 
 .mobile-menu {
@@ -704,6 +701,10 @@ p {
   font-size: 1.8rem;
 }
 
+.mobile-menu nav a:hover {
+  color: var(--champagne-dark);
+}
+
 .mobile-menu-footer {
   margin-top: 28px;
 }
@@ -728,7 +729,7 @@ p {
 
 
 /* =========================================================
-   NEW HERO
+   14. HOME HERO
 ========================================================= */
 
 .hero {
@@ -744,7 +745,7 @@ p {
 
   overflow: hidden;
 
-  color: white;
+  color: var(--white);
 
   text-align: center;
 
@@ -771,6 +772,8 @@ p {
 
   background-position:
     center 10%;
+
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -802,7 +805,7 @@ p {
   margin:
     17px auto 28px;
 
-  color: white;
+  color: var(--white);
 }
 
 .hero-content h1 span {
@@ -853,7 +856,6 @@ p {
     rgba(255, 255, 255, 0.75);
 
   font-size: 0.67rem;
-
   font-weight: 500;
 
   letter-spacing: 0.11em;
@@ -871,7 +873,7 @@ p {
 
 
 /* =========================================================
-   INTRO
+   15. HOME INTRODUCTION
 ========================================================= */
 
 .intro-section {
@@ -926,7 +928,7 @@ p {
 
 
 /* =========================================================
-   COLLECTION SECTION
+   16. COLLECTION SECTION
 ========================================================= */
 
 .collection-section {
@@ -942,25 +944,27 @@ p {
   display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(2, minmax(0, 1fr));
 
   gap: 32px;
 }
 
 
 /* =========================================================
-   NEW FULL PRODUCT CARDS
+   17. COLLECTION CARDS
 ========================================================= */
 
 .collection-card,
 .product-card {
+  height: 100%;
+
   display: flex;
 
   flex-direction: column;
 
   overflow: hidden;
 
-  background: white;
+  background: var(--white);
 
   border:
     1px solid var(--border);
@@ -988,8 +992,6 @@ p {
     var(--shadow-medium);
 }
 
-
-/* Image container */
 .collection-image,
 .product-card-image {
   height: 500px;
@@ -1012,12 +1014,6 @@ p {
     1px solid var(--border);
 }
 
-
-/*
-  IMPORTANT:
-  contain preserves the entire product image.
-  We are intentionally not cropping dresses, veils or accessories.
-*/
 .collection-image img,
 .product-card-image img {
   width: 100%;
@@ -1031,16 +1027,12 @@ p {
     transform 0.55s ease;
 }
 
-.collection-card:hover
-.collection-image img,
-.product-card:hover
-.product-card-image img {
+.collection-card:hover .collection-image img,
+.product-card:hover .product-card-image img {
   transform:
     scale(1.025);
 }
 
-
-/* Number overlay */
 .collection-number {
   position: absolute;
 
@@ -1071,10 +1063,7 @@ p {
   font-size: 1rem;
 }
 
-
-/* Full card copy */
-.collection-card-copy,
-.product-card-content {
+.collection-card-copy {
   min-height: 180px;
 
   padding:
@@ -1096,7 +1085,6 @@ p {
   color: var(--champagne-dark);
 
   font-size: 0.65rem;
-
   font-weight: 600;
 
   letter-spacing: 0.16em;
@@ -1137,22 +1125,22 @@ p {
     transform var(--transition);
 }
 
-.collection-card:hover
-.collection-arrow {
+.collection-card:hover .collection-arrow {
   background: var(--espresso);
 
-  color: white;
+  color: var(--white);
 
   transform:
     translateX(3px);
 }
 
-
-/* Alternate detailed product-card format */
 .product-card-content {
-  display: block;
+  padding:
+    28px 30px 32px;
+}
 
-  min-height: auto;
+.product-card-content h3 {
+  margin-bottom: 13px;
 }
 
 .product-card-content p {
@@ -1176,7 +1164,6 @@ p {
   color: var(--espresso);
 
   font-size: 0.68rem;
-
   font-weight: 600;
 
   letter-spacing: 0.11em;
@@ -1186,7 +1173,277 @@ p {
 
 
 /* =========================================================
-   EXPERIENCE SECTION
+   18. COLLECTION PAGE HERO
+   Dresses / Veils / Accessories
+========================================================= */
+
+.catalog-hero,
+.collection-page-hero {
+  padding:
+    115px 24px 95px;
+
+  background:
+    var(--ivory-soft);
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: center;
+}
+
+.catalog-hero-inner,
+.collection-page-hero-inner {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.catalog-hero h1,
+.collection-page-hero h1 {
+  margin:
+    14px 0 24px;
+
+  font-size:
+    clamp(4rem, 7vw, 6.7rem);
+}
+
+.catalog-hero p:not(.eyebrow),
+.collection-page-hero p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+.catalog-section {
+  padding:
+    110px 24px 125px;
+
+  background: var(--ivory);
+}
+
+.catalog-intro {
+  max-width: 760px;
+
+  margin:
+    0 auto 60px;
+
+  text-align: center;
+}
+
+.catalog-intro h2 {
+  margin:
+    12px 0 22px;
+}
+
+.catalog-intro h2 span {
+  display: block;
+
+  color: var(--champagne-dark);
+}
+
+.catalog-intro > p:not(.eyebrow) {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  line-height: 1.9;
+}
+
+.catalog-grid,
+.products-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   19. PRODUCT / DRESS FLIP CARDS
+========================================================= */
+
+.dress-card,
+.catalog-card {
+  height: 100%;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.dress-card:hover,
+.catalog-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    var(--border-gold);
+
+  box-shadow:
+    var(--shadow-medium);
+}
+
+.dress-image-wrap,
+.flip-card {
+  width: 100%;
+  height: 520px;
+
+  overflow: hidden;
+
+  perspective: 1200px;
+
+  background:
+    #f5f2ed;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  transition:
+    transform 0.8s ease;
+
+  transform-style:
+    preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform:
+    rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+}
+
+.flip-front {
+  transform:
+    rotateY(0deg);
+}
+
+.flip-back {
+  transform:
+    rotateY(180deg);
+}
+
+.flip-img {
+  width: 100%;
+  height: 100%;
+
+  padding: 18px;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background:
+    #f5f2ed;
+}
+
+.dress-card-content,
+.catalog-card-content {
+  padding:
+    28px 30px 32px;
+}
+
+.dress-card-content h3,
+.catalog-card-content h3 {
+  margin:
+    0 0 12px;
+
+  font-size: 2.3rem;
+}
+
+.dress-card-content p,
+.catalog-card-content p {
+  margin:
+    0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+.flip-note {
+  margin-top: 10px !important;
+
+  color: var(--text-light) !important;
+
+  font-size: 0.7rem !important;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   20. PLACEHOLDER IMAGES
+========================================================= */
+
+.image-placeholder {
+  height: 500px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #eee8df;
+
+  border:
+    1px dashed var(--champagne);
+
+  color: var(--text-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.8rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   21. EXPERIENCE SECTION — HOME
 ========================================================= */
 
 .experience-section {
@@ -1210,7 +1467,7 @@ p {
   margin:
     14px 0 0;
 
-  color: white;
+  color: var(--white);
 }
 
 .experience-heading h2 span {
@@ -1263,7 +1520,7 @@ p {
 .experience-item h3 {
   margin-bottom: 14px;
 
-  color: white;
+  color: var(--white);
 
   font-size: 2.2rem;
 }
@@ -1279,7 +1536,247 @@ p {
 
 
 /* =========================================================
-   STORY
+   22. SERVICES PAGE HERO
+========================================================= */
+
+.services-page-hero {
+  padding:
+    115px 24px 95px;
+
+  background:
+    var(--ivory-soft);
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: center;
+}
+
+.services-page-hero-inner {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.services-page-hero h1 {
+  margin:
+    14px 0 24px;
+
+  font-size:
+    clamp(4rem, 7vw, 6.7rem);
+}
+
+.services-page-hero p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   23. SERVICES CARDS
+========================================================= */
+
+.services-section {
+  padding:
+    120px 24px;
+
+  background: var(--ivory);
+}
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 34px;
+
+  align-items: stretch;
+}
+
+.service-card {
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    var(--border-gold);
+
+  box-shadow:
+    var(--shadow-medium);
+}
+
+.service-image {
+  height: 420px;
+
+  overflow: hidden;
+
+  background:
+    #f5f2ed;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.service-card:hover .service-image img {
+  transform:
+    scale(1.025);
+}
+
+.service-card-content {
+  height: 100%;
+
+  padding:
+    36px 38px 40px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.service-number {
+  margin-bottom: 18px;
+
+  color: var(--champagne-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+.service-card h2,
+.service-card h3 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(2.5rem, 4vw, 3.6rem);
+}
+
+.service-description {
+  margin:
+    0 0 28px;
+
+  line-height: 1.85;
+}
+
+.service-features {
+  margin:
+    0 0 30px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-features li {
+  position: relative;
+
+  padding:
+    11px 0 11px 24px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color: var(--text-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.6;
+}
+
+.service-features li::before {
+  content: "—";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--champagne-dark);
+}
+
+.service-details {
+  margin-top: auto;
+
+  padding-top: 10px;
+}
+
+.service-detail {
+  padding:
+    8px 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  font-size: 0.82rem;
+}
+
+.service-detail strong {
+  color: var(--espresso);
+
+  font-weight: 600;
+}
+
+.service-detail span {
+  color: var(--text-soft);
+
+  text-align: right;
+}
+
+.service-card .btn {
+  width: 100%;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   24. STORY — HOME
 ========================================================= */
 
 .story-section {
@@ -1349,7 +1846,675 @@ p {
 
 
 /* =========================================================
-   BRIDAL CTA
+   25. ABOUT PAGE HERO
+========================================================= */
+
+.about-page-hero {
+  padding:
+    115px 24px 90px;
+
+  background:
+    var(--ivory-soft);
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: center;
+}
+
+.about-page-hero-inner {
+  max-width: 880px;
+
+  margin: 0 auto;
+}
+
+.about-page-hero h1 {
+  margin:
+    14px 0 25px;
+
+  font-size:
+    clamp(4rem, 7vw, 6.7rem);
+}
+
+.about-page-hero p:not(.eyebrow) {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   26. ABOUT STORY
+========================================================= */
+
+.about-story-section {
+  padding:
+    125px 24px;
+
+  background: var(--ivory);
+}
+
+.about-story-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.about-logo-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+
+  padding: 55px;
+
+  background: var(--ivory-soft);
+
+  border:
+    1px solid var(--border);
+}
+
+.about-logo-wrap img {
+  width: 330px;
+
+  max-width: 100%;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.about-logo-wrap:hover img {
+  transform:
+    scale(1.025);
+}
+
+.about-story-copy h2 {
+  margin:
+    14px 0 27px;
+}
+
+.about-story-copy h2 span {
+  display: block;
+
+  color: var(--champagne-dark);
+}
+
+.about-story-copy p {
+  font-size: 1rem;
+
+  line-height: 1.95;
+}
+
+.about-story-lead {
+  color: var(--espresso) !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.7rem !important;
+
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   27. ABOUT VALUES
+========================================================= */
+
+.about-values-section {
+  padding:
+    120px 24px;
+
+  background: var(--espresso);
+}
+
+.about-values-heading {
+  max-width: 750px;
+
+  margin-bottom: 65px;
+}
+
+.about-values-heading .eyebrow {
+  color: var(--champagne-soft);
+}
+
+.about-values-heading h2 {
+  margin:
+    14px 0 0;
+
+  color: var(--white);
+}
+
+.about-values-heading h2 span {
+  display: block;
+
+  color: var(--champagne-soft);
+}
+
+.about-values-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+}
+
+.about-value {
+  min-height: 330px;
+
+  padding:
+    42px 34px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+}
+
+.about-value:last-child {
+  border-right: none;
+}
+
+.about-value-number {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: var(--champagne);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.about-value h3 {
+  margin-bottom: 18px;
+
+  color: var(--white);
+
+  font-size: 2.3rem;
+}
+
+.about-value p {
+  color:
+    rgba(255, 255, 255, 0.67);
+
+  font-size: 0.9rem;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   28. ABOUT QUOTE
+========================================================= */
+
+.about-quote-section {
+  padding:
+    130px 24px;
+
+  background: var(--ivory-soft);
+
+  text-align: center;
+}
+
+.about-quote-inner {
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+.about-quote-section blockquote {
+  margin:
+    20px auto 0;
+
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(3rem, 6vw, 5.5rem);
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.025em;
+}
+
+.about-quote-section blockquote span {
+  color: var(--champagne-dark);
+}
+
+
+/* =========================================================
+   29. CONTACT HERO
+========================================================= */
+
+.contact-page-hero {
+  padding:
+    115px 24px 95px;
+
+  background:
+    var(--ivory-soft);
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: center;
+}
+
+.contact-page-hero-inner {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.contact-page-hero h1 {
+  margin:
+    14px 0 24px;
+
+  font-size:
+    clamp(4rem, 7vw, 6.7rem);
+}
+
+.contact-page-hero p:not(.eyebrow) {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   30. CONTACT OPTIONS
+========================================================= */
+
+.contact-options-section {
+  background: var(--ivory);
+}
+
+.contact-options-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.contact-option-card {
+  min-height: 410px;
+
+  position: relative;
+
+  padding:
+    38px 34px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: var(--white);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.contact-option-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    var(--border-gold);
+
+  box-shadow:
+    var(--shadow-medium);
+}
+
+.contact-option-icon {
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid var(--border-gold);
+
+  color: var(--champagne-dark);
+
+  font-size: 1.25rem;
+}
+
+.contact-option-number {
+  position: absolute;
+
+  top: 39px;
+  right: 34px;
+
+  color: var(--text-light);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+.contact-option-card h3 {
+  margin:
+    10px 0 16px;
+
+  font-size: 2.6rem;
+}
+
+.contact-option-card > p:not(.eyebrow) {
+  margin:
+    0 0 30px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+.contact-option-link {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-top:
+    1px solid var(--border);
+
+  color: var(--espresso);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    color var(--transition);
+}
+
+a.contact-option-link:hover {
+  color: var(--champagne-dark);
+}
+
+.contact-option-link span {
+  font-size: 1rem;
+
+  transition:
+    transform var(--transition);
+}
+
+a.contact-option-link:hover span {
+  transform:
+    translateX(4px);
+}
+
+.static-contact-link {
+  color: var(--text-soft);
+}
+
+
+/* =========================================================
+   31. CONTACT BOOKING
+========================================================= */
+
+.contact-booking-section {
+  padding:
+    125px 24px;
+
+  background: var(--cream);
+}
+
+.contact-booking-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.contact-booking-copy h2 {
+  margin:
+    14px 0 28px;
+}
+
+.contact-booking-copy h2 span {
+  display: block;
+
+  color: var(--champagne-dark);
+}
+
+.contact-booking-copy > p:not(.eyebrow) {
+  max-width: 570px;
+
+  line-height: 1.9;
+}
+
+.contact-booking-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 26px;
+
+  margin-top: 35px;
+}
+
+.booking-detail {
+  padding:
+    28px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    55px 1fr;
+
+  gap: 24px;
+
+  border-bottom:
+    1px solid
+    rgba(69, 56, 48, 0.16);
+}
+
+.booking-detail:first-child {
+  border-top:
+    1px solid
+    rgba(69, 56, 48, 0.16);
+}
+
+.booking-detail > span {
+  color: var(--champagne-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.1rem;
+}
+
+.booking-detail h3 {
+  margin:
+    0 0 8px;
+
+  font-size: 1.9rem;
+}
+
+.booking-detail p {
+  margin: 0;
+
+  font-size: 0.85rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   32. CONTACT SOCIAL
+========================================================= */
+
+.contact-social-section {
+  padding:
+    110px 24px;
+
+  background: var(--ivory-soft);
+}
+
+.contact-social-inner {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.contact-social-inner h2 {
+  margin:
+    14px 0 0;
+}
+
+.contact-social-inner h2 span {
+  display: block;
+
+  color: var(--champagne-dark);
+}
+
+.contact-social-links {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top:
+    1px solid var(--border);
+}
+
+.contact-social-links > a {
+  padding:
+    24px 4px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px 1fr auto;
+
+  gap: 18px;
+
+  align-items: center;
+
+  border-bottom:
+    1px solid var(--border);
+
+  transition:
+    padding var(--transition),
+    color var(--transition);
+}
+
+.contact-social-links > a:hover {
+  padding-left: 12px;
+
+  color: var(--champagne-dark);
+}
+
+.contact-social-links i {
+  font-size: 1.4rem;
+}
+
+.contact-social-links div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-social-links div span {
+  color: var(--text-light);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.contact-social-links strong {
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.55rem;
+
+  font-weight: 500;
+}
+
+.social-arrow {
+  font-size: 1.1rem;
+
+  transition:
+    transform var(--transition);
+}
+
+.contact-social-links > a:hover .social-arrow {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   33. BRIDAL CTA
 ========================================================= */
 
 .bridal-cta {
@@ -1363,7 +2528,7 @@ p {
       #1d1815
     );
 
-  color: white;
+  color: var(--white);
 
   text-align: center;
 }
@@ -1382,7 +2547,7 @@ p {
   margin:
     14px 0 24px;
 
-  color: white;
+  color: var(--white);
 }
 
 .bridal-cta h2 span {
@@ -1417,7 +2582,7 @@ p {
 
 
 /* =========================================================
-   NEW FOOTER
+   34. FOOTER
 ========================================================= */
 
 .site-footer {
@@ -1426,7 +2591,7 @@ p {
 
   background: #15110f;
 
-  color: white;
+  color: var(--white);
 }
 
 .footer-grid {
@@ -1441,7 +2606,7 @@ p {
 }
 
 .footer-logo {
-  color: white;
+  color: var(--white);
 
   font-family:
     "Cormorant Garamond",
@@ -1460,7 +2625,6 @@ p {
   color: var(--champagne);
 
   font-size: 0.62rem;
-
   font-weight: 600;
 
   letter-spacing: 0.18em;
@@ -1488,7 +2652,7 @@ p {
 .footer-column h3 {
   margin-bottom: 9px;
 
-  color: white;
+  color: var(--white);
 
   font-family:
     "Montserrat",
@@ -1496,7 +2660,6 @@ p {
     sans-serif;
 
   font-size: 0.68rem;
-
   font-weight: 600;
 
   letter-spacing: 0.14em;
@@ -1555,16 +2718,20 @@ p {
   font-size: 1.05rem;
 
   transition:
-    color var(--transition);
+    color var(--transition),
+    transform var(--transition);
 }
 
 .footer-social-icons a:hover {
   color: var(--champagne);
+
+  transform:
+    translateY(-2px);
 }
 
 
 /* =========================================================
-   WHATSAPP
+   35. FLOATING WHATSAPP
 ========================================================= */
 
 .floating-whatsapp {
@@ -1587,7 +2754,7 @@ p {
 
   background: var(--whatsapp);
 
-  color: white;
+  color: var(--white);
 
   font-size: 1.75rem;
 
@@ -1615,7 +2782,7 @@ p {
 
 
 /* =========================================================
-   REVEAL ANIMATION
+   36. REVEAL ANIMATION
 ========================================================= */
 
 .reveal {
@@ -1638,572 +2805,20 @@ p {
 
 
 /* =========================================================
-   LEGACY SUPPORT
-   Keeps older pages functional while we update them.
+   37. ACCESSIBILITY / KEYBOARD
 ========================================================= */
 
+a:focus-visible,
+button:focus-visible {
+  outline:
+    2px solid var(--champagne-dark);
 
-/* OLD NAV */
-body > nav {
-  padding:
-    18px 5%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 25px;
-
-  position: relative;
-
-  z-index: 1000;
-
-  background: var(--espresso);
-}
-
-.logo-area {
-  display: flex;
-
-  align-items: center;
-
-  gap: 14px;
-}
-
-.logo {
-  color: var(--champagne);
-
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
-
-  font-size: 2.2rem;
-
-  font-weight: 600;
-}
-
-.top-social-icon {
-  color: var(--champagne);
-
-  font-size: 1.3rem;
-}
-
-body > nav .menu-toggle {
-  display: flex;
-}
-
-
-/* OLD POPUP NAV */
-.nav-menu {
-  display: none;
-
-  min-width: 260px;
-
-  position: absolute;
-
-  top: 78px;
-  right: 5%;
-
-  padding:
-    24px 30px;
-
-  background: var(--espresso);
-
-  border:
-    1px solid var(--champagne);
-
-  box-shadow:
-    0 18px 38px
-    rgba(0, 0, 0, 0.25);
-
-  text-align: center;
-}
-
-.nav-menu.show-menu {
-  display: block;
-}
-
-.nav-menu a {
-  display: block;
-
-  padding:
-    10px 0;
-
-  color: white;
-
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
-
-  font-size: 1.55rem;
-}
-
-.nav-menu a:hover {
-  color: var(--champagne);
-}
-
-
-/* OLD SECTION TEXT */
-.section > h2 {
-  text-align: center;
-}
-
-.section > p {
-  max-width: 850px;
-
-  margin:
-    0 auto;
-
-  color: var(--text-soft);
-
-  font-size: 1rem;
-
-  line-height: 1.9;
-
-  text-align: center;
-}
-
-
-/* OLD ABOUT HOME */
-.about-container {
-  max-width: 850px;
-
-  margin:
-    65px auto 75px;
-
-  text-align: center;
-}
-
-.about-title {
-  margin-bottom: 24px;
-
-  color: var(--champagne-dark);
-
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
-
-  font-size: 3.8rem;
-
-  font-weight: 500;
-}
-
-.about-text {
-  color: var(--text-soft);
-
-  font-size: 1rem;
-
-  line-height: 1.9;
-}
-
-
-/* OLD GRIDS */
-.grid,
-.home-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 32px;
-
-  margin-top: 50px;
-}
-
-.home-card-centered,
-.contact-card-centered {
-  grid-column:
-    1 / 3;
-
-  width: 50%;
-
-  justify-self: center;
+  outline-offset: 4px;
 }
 
 
 /* =========================================================
-   LEGACY CARD DESIGN — NOW FULL ENCLOSED CARDS
-========================================================= */
-
-.card {
-  height: 100%;
-
-  overflow: hidden;
-
-  display: flex;
-
-  flex-direction: column;
-
-  background: white;
-
-  border:
-    1px solid var(--border);
-
-  box-shadow:
-    var(--shadow-soft);
-
-  transition:
-    transform var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition);
-}
-
-.card:hover {
-  transform:
-    translateY(-7px);
-
-  border-color:
-    var(--border-gold);
-
-  box-shadow:
-    var(--shadow-medium);
-}
-
-
-/* Legacy images are now contained INSIDE the card */
-.card-img,
-.home-card-img {
-  width: 100%;
-  height: 470px;
-
-  margin: 0;
-
-  padding: 18px;
-
-  object-fit: contain;
-
-  object-position: center;
-
-  background: #f5f2ed;
-
-  border-radius: 0;
-
-  border-bottom:
-    1px solid var(--border);
-
-  transition:
-    transform 0.5s ease;
-}
-
-.card:hover
-.card-img,
-.card:hover
-.home-card-img {
-  transform:
-    scale(1.02);
-}
-
-
-/* Legacy product name/content stays visually inside card */
-.card h3 {
-  margin:
-    27px 28px 8px;
-
-  color: var(--espresso);
-
-  font-size: 2.2rem;
-
-  text-align: left;
-}
-
-.card > p,
-.card div > p {
-  margin:
-    0 28px 30px;
-
-  color: var(--text-soft);
-
-  font-size: 0.9rem;
-
-  line-height: 1.7;
-
-  text-align: left;
-}
-
-.card-link,
-.card-link:visited,
-.card-link:hover,
-.card-link:active {
-  height: 100%;
-
-  display: block;
-
-  color: inherit;
-
-  text-decoration: none;
-}
-
-.card-link:hover h3 {
-  color: var(--champagne-dark);
-}
-
-
-/* =========================================================
-   FLIP PRODUCT CARDS — LEGACY COLLECTION PAGES
-========================================================= */
-
-.dress-image-wrap,
-.flip-card {
-  width: 100%;
-  height: 500px;
-
-  overflow: hidden;
-
-  perspective: 1200px;
-
-  background: #f5f2ed;
-
-  border-radius: 0;
-}
-
-.flip-inner {
-  width: 100%;
-  height: 100%;
-
-  position: relative;
-
-  transition:
-    transform 0.8s ease;
-
-  transform-style:
-    preserve-3d;
-}
-
-.flip-card:hover
-.flip-inner {
-  transform:
-    rotateY(180deg);
-}
-
-.flip-front,
-.flip-back {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  overflow: hidden;
-
-  border-radius: 0;
-
-  backface-visibility:
-    hidden;
-
-  -webkit-backface-visibility:
-    hidden;
-}
-
-.flip-front {
-  transform:
-    rotateY(0deg);
-}
-
-.flip-back {
-  transform:
-    rotateY(180deg);
-}
-
-.flip-img {
-  width: 100%;
-  height: 100%;
-
-  padding: 18px;
-
-  object-fit: contain;
-
-  object-position: center;
-
-  background: #f5f2ed;
-
-  border-radius: 0;
-}
-
-
-/* Placeholder */
-.image-placeholder {
-  height: 500px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 30px;
-
-  background: #eee8df;
-
-  border:
-    1px dashed var(--champagne);
-
-  color: var(--text-soft);
-
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
-
-  font-size: 1.8rem;
-
-  text-align: center;
-}
-
-.flip-note {
-  margin-top: 10px;
-
-  color: var(--text-soft);
-
-  font-size: 0.8rem;
-}
-
-
-/* =========================================================
-   SOCIAL LEGACY
-========================================================= */
-
-.social-section {
-  margin-top: 80px;
-}
-
-.social-icons {
-  display: flex;
-
-  justify-content: center;
-
-  gap: 28px;
-
-  margin-top: 24px;
-}
-
-.social-icons a {
-  color: var(--espresso);
-
-  font-size: 2rem;
-}
-
-.social-icons a:hover {
-  color: var(--champagne-dark);
-}
-
-
-/* =========================================================
-   ABOUT PAGE LEGACY
-========================================================= */
-
-.about-logo {
-  width: 280px;
-
-  max-width: 85%;
-
-  display: block;
-
-  margin:
-    50px auto 70px;
-
-  transition:
-    transform var(--transition);
-}
-
-.about-logo:hover {
-  transform:
-    scale(1.03);
-}
-
-.about-section {
-  max-width: 950px;
-
-  margin:
-    0 auto 75px;
-}
-
-.about-section h2 {
-  margin-bottom: 20px;
-
-  color: var(--champagne-dark);
-}
-
-.about-section p {
-  color: var(--text-soft);
-
-  font-size: 1rem;
-
-  line-height: 1.9;
-}
-
-.about-quote {
-  max-width: 900px;
-
-  margin:
-    80px auto 60px;
-
-  color: var(--champagne-dark);
-
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
-
-  font-size:
-    clamp(2.6rem, 5vw, 4.2rem);
-
-  line-height: 1.2;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   LEGACY FOOTER
-========================================================= */
-
-body > footer:not(.site-footer) {
-  margin-top: 80px;
-
-  padding:
-    50px 24px;
-
-  background: #15110f;
-
-  color: white;
-
-  text-align: center;
-}
-
-body > footer:not(.site-footer) p {
-  color:
-    rgba(255, 255, 255, 0.68);
-
-  font-size: 0.85rem;
-}
-
-body > footer:not(.site-footer) a {
-  color: var(--champagne);
-}
-
-.footer-socials {
-  margin-top: 20px;
-}
-
-.footer-socials a {
-  margin:
-    0 10px;
-
-  color: var(--champagne);
-
-  font-size: 1.4rem;
-}
-
-.footer-socials a:hover {
-  color: white;
-}
-
-
-/* =========================================================
-   TABLET
+   38. TABLET — 1100PX
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -2226,12 +2841,16 @@ body > footer:not(.site-footer) a {
 
 
   .intro-grid,
-  .story-grid {
+  .story-grid,
+  .about-story-grid,
+  .contact-booking-grid,
+  .contact-social-inner {
     grid-template-columns:
       1fr;
 
     gap: 55px;
   }
+
 
   .story-number {
     display: none;
@@ -2254,6 +2873,37 @@ body > footer:not(.site-footer) a {
   }
 
 
+  .about-values-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .about-value {
+    min-height: auto;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.14);
+  }
+
+  .about-value:last-child {
+    border-bottom: none;
+  }
+
+
+  .contact-options-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .contact-option-card:last-child {
+    grid-column:
+      1 / -1;
+  }
+
+
   .footer-grid {
     grid-template-columns:
       repeat(2, 1fr);
@@ -2263,7 +2913,35 @@ body > footer:not(.site-footer) a {
 
 
 /* =========================================================
-   MOBILE
+   39. TABLET / LARGE MOBILE — 820PX
+========================================================= */
+
+@media (max-width: 820px) {
+
+  .collection-grid,
+  .catalog-grid,
+  .products-grid,
+  .services-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .collection-image,
+  .product-card-image,
+  .dress-image-wrap,
+  .flip-card {
+    height: 520px;
+  }
+
+  .service-image {
+    height: 500px;
+  }
+
+}
+
+
+/* =========================================================
+   40. MOBILE — 720PX
 ========================================================= */
 
 @media (max-width: 720px) {
@@ -2281,8 +2959,18 @@ body > footer:not(.site-footer) a {
     min-height: 78px;
   }
 
+  .nav-container {
+    width:
+      calc(100% - 36px);
+  }
+
   .mobile-menu {
     top: 78px;
+
+    max-height:
+      calc(100svh - 78px);
+
+    overflow-y: auto;
   }
 
   .brand-name {
@@ -2296,7 +2984,7 @@ body > footer:not(.site-footer) a {
   }
 
 
-  /* HERO */
+  /* HOME HERO */
 
   .hero {
     min-height:
@@ -2321,7 +3009,7 @@ body > footer:not(.site-footer) a {
 
   .hero-content h1 {
     font-size:
-      clamp(3.7rem, 17vw, 5.2rem);
+      clamp(3.6rem, 17vw, 5.2rem);
   }
 
   .hero-description {
@@ -2352,32 +3040,58 @@ body > footer:not(.site-footer) a {
   }
 
 
-  /* GENERAL */
+  /* GENERAL SECTIONS */
 
+  .section,
   .intro-section,
   .collection-section,
+  .catalog-section,
   .experience-section,
   .story-section,
+  .services-section,
+  .about-story-section,
+  .about-values-section,
+  .about-quote-section,
+  .contact-options-section,
+  .contact-booking-section,
+  .contact-social-section,
   .bridal-cta {
     padding:
       85px 20px;
   }
 
-  .section {
+
+  .catalog-hero,
+  .collection-page-hero,
+  .services-page-hero,
+  .about-page-hero,
+  .contact-page-hero {
     padding:
-      80px 20px;
+      85px 20px 70px;
   }
 
-  .section-heading {
-    margin-bottom: 40px;
+
+  .catalog-hero h1,
+  .collection-page-hero h1,
+  .services-page-hero h1,
+  .about-page-hero h1,
+  .contact-page-hero h1 {
+    font-size:
+      clamp(3.5rem, 15vw, 5rem);
+  }
+
+
+  .section-heading,
+  .catalog-intro {
+    margin-bottom: 42px;
   }
 
 
   /* COLLECTION */
 
   .collection-grid,
-  .grid,
-  .home-grid {
+  .catalog-grid,
+  .products-grid {
     grid-template-columns:
       1fr;
 
@@ -2385,7 +3099,9 @@ body > footer:not(.site-footer) a {
   }
 
   .collection-image,
-  .product-card-image {
+  .product-card-image,
+  .dress-image-wrap,
+  .flip-card {
     height: 430px;
   }
 
@@ -2401,22 +3117,11 @@ body > footer:not(.site-footer) a {
     font-size: 2rem;
   }
 
-  .card-img,
-  .home-card-img {
-    height: 420px;
-  }
-
-  .card h3 {
-    margin:
-      24px 22px 8px;
-
-    font-size: 2rem;
-  }
-
-  .card > p,
-  .card div > p {
-    margin:
-      0 22px 25px;
+  .dress-card-content,
+  .catalog-card-content,
+  .product-card-content {
+    padding:
+      24px 22px 27px;
   }
 
 
@@ -2449,6 +3154,129 @@ body > footer:not(.site-footer) a {
   }
 
 
+  /* SERVICES */
+
+  .services-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .service-image {
+    height: 420px;
+  }
+
+  .service-card-content {
+    padding:
+      30px 24px 32px;
+  }
+
+  .service-detail {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+  .service-detail span {
+    text-align: left;
+  }
+
+
+  /* ABOUT */
+
+  .about-story-grid {
+    gap: 45px;
+  }
+
+  .about-logo-wrap {
+    min-height: 390px;
+
+    padding: 40px;
+  }
+
+  .about-values-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .about-value {
+    padding:
+      38px 5px;
+  }
+
+  .about-value-number {
+    margin-bottom: 28px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-options-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .contact-option-card:last-child {
+    grid-column: auto;
+  }
+
+  .contact-option-card {
+    min-height: 365px;
+
+    padding:
+      32px 26px;
+  }
+
+  .contact-option-number {
+    top: 33px;
+    right: 26px;
+  }
+
+  .contact-booking-grid,
+  .contact-social-inner {
+    gap: 50px;
+  }
+
+  .contact-booking-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .contact-booking-actions .btn {
+    width: 100%;
+  }
+
+  .booking-detail {
+    grid-template-columns:
+      40px 1fr;
+
+    gap: 15px;
+  }
+
+  .contact-social-links > a {
+    grid-template-columns:
+      35px 1fr auto;
+
+    gap: 12px;
+  }
+
+
+  /* CTA */
+
+  .cta-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+
+    width: 100%;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+
   /* FOOTER */
 
   .footer-grid {
@@ -2477,63 +3305,11 @@ body > footer:not(.site-footer) a {
     font-size: 1.55rem;
   }
 
-
-  /* LEGACY NAV */
-
-  body > nav {
-    justify-content: center;
-
-    padding:
-      15px 20px;
-
-    text-align: center;
-  }
-
-  .logo-area {
-    width: 100%;
-
-    justify-content: center;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  .nav-menu {
-    width: calc(100% - 40px);
-
-    top: 80px;
-    right: 20px;
-
-    padding:
-      22px;
-  }
-
-  .nav-menu a {
-    font-size: 1.5rem;
-  }
-
-
-  /* LEGACY GRID */
-
-  .home-card-centered,
-  .contact-card-centered {
-    width: 100%;
-
-    grid-column: auto;
-  }
-
-  .dress-image-wrap,
-  .flip-card,
-  .image-placeholder {
-    height: 420px;
-  }
-
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   41. SMALL MOBILE — 460PX
 ========================================================= */
 
 @media (max-width: 460px) {
@@ -2542,18 +3318,29 @@ body > footer:not(.site-footer) a {
     font-size: 1.45rem;
   }
 
-  .hero-content h1 {
-    font-size: 3.6rem;
+  .brand-subtitle {
+    max-width: 150px;
   }
+
+
+  .hero-content h1 {
+    font-size: 3.55rem;
+  }
+
 
   .collection-image,
   .product-card-image,
-  .card-img,
-  .home-card-img,
   .dress-image-wrap,
-  .flip-card {
+  .flip-card,
+  .image-placeholder {
     height: 370px;
   }
+
+
+  .service-image {
+    height: 360px;
+  }
+
 
   .collection-card-copy {
     padding:
@@ -2563,6 +3350,80 @@ body > footer:not(.site-footer) a {
   .collection-arrow {
     width: 38px;
     height: 38px;
+  }
+
+
+  .contact-option-card {
+    min-height: 350px;
+  }
+
+
+  .contact-option-link {
+    font-size: 0.72rem;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  .about-logo-wrap {
+    min-height: 320px;
+
+    padding: 32px;
+  }
+
+
+  .booking-detail h3 {
+    font-size: 1.7rem;
+  }
+
+}
+
+
+/* =========================================================
+   42. TOUCH DEVICES
+
+   Flip cards should not depend exclusively on hover.
+========================================================= */
+
+@media (hover: none) {
+
+  .collection-card:hover,
+  .product-card:hover,
+  .dress-card:hover,
+  .catalog-card:hover,
+  .service-card:hover,
+  .contact-option-card:hover {
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   43. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+
+  .reveal {
+    opacity: 1;
+
+    transform: none;
   }
 
 }
