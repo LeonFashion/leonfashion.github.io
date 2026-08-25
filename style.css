@@ -3921,3 +3921,543 @@ a.contact-option-link:hover {
   }
 
 }
+
+/* =========================================================
+   D'LEON — IMAGE SCALE + PRODUCT CARD CLARITY REFINEMENT
+   Keeps the established bridal/editorial visual identity.
+========================================================= */
+
+
+/* =========================================================
+   01. ABOUT PAGE — SMALLER BRAND IMAGE
+========================================================= */
+
+.about-brand-section {
+  padding-top: 82px;
+  padding-bottom: 92px;
+}
+
+.about-brand-grid {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+
+  gap: 64px;
+  align-items: center;
+}
+
+.about-brand-logo-wrap {
+  width: 100%;
+  max-width: 390px;
+  min-height: 330px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  background: var(--ivory-soft);
+
+  border: 1px solid rgba(149, 119, 72, 0.24);
+
+  box-shadow:
+    0 12px 30px rgba(47, 41, 37, 0.055);
+}
+
+.about-brand-logo {
+  width: min(100%, 245px);
+  max-height: 270px;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition:
+    transform var(--transition);
+}
+
+.about-brand-logo-wrap:hover .about-brand-logo {
+  transform: scale(1.02);
+}
+
+.about-brand-copy h2 {
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+
+.about-brand-copy h2 span {
+  display: block;
+  color: var(--champagne-dark);
+}
+
+.about-brand-copy > p:not(.eyebrow) {
+  max-width: 560px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   02. SERVICES PAGE — SMALLER EXPERIENCE IMAGES
+========================================================= */
+
+.services-experience-grid {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+  align-items: stretch;
+}
+
+.service-experience-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid rgba(149, 119, 72, 0.25);
+
+  box-shadow:
+    0 12px 32px rgba(47, 41, 37, 0.06);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.service-experience-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(149, 119, 72, 0.45);
+
+  box-shadow:
+    0 20px 45px rgba(47, 41, 37, 0.09);
+}
+
+.service-experience-image {
+  width: 100%;
+  height: 315px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 18px;
+
+  background: #f5f2ed;
+
+  border-bottom:
+    1px solid rgba(149, 119, 72, 0.20);
+}
+
+.service-experience-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.service-experience-card:hover .service-experience-image img {
+  transform: scale(1.02);
+}
+
+.service-premium-label {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  padding: 7px 10px;
+
+  background: rgba(36, 29, 25, 0.92);
+  color: var(--white);
+
+  font-size: 0.58rem;
+  font-weight: 600;
+
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.service-experience-content {
+  height: 100%;
+
+  padding: 28px 30px 32px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.service-experience-content h2 {
+  margin: 10px 0 15px;
+
+  font-size:
+    clamp(2.45rem, 3.6vw, 3.4rem);
+}
+
+.service-experience-lead {
+  margin: 0 0 24px;
+
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.service-experience-content .service-features {
+  margin-bottom: 26px;
+}
+
+.service-experience-content .service-details {
+  margin-top: auto;
+}
+
+.service-experience-content .service-details > div {
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.service-experience-content .service-details span,
+.service-benefit > span {
+  color: var(--text-light);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-experience-content .service-details strong {
+  color: var(--espresso);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+.service-benefit {
+  margin-top: 20px;
+  padding: 17px 18px;
+
+  background: var(--ivory-soft);
+
+  border: 1px solid var(--border);
+}
+
+.service-benefit p {
+  margin: 5px 0 0;
+
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.service-book-button {
+  width: 100%;
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   03. VEILS + ACCESSORIES — CLEAR CARD BOUNDARIES
+========================================================= */
+
+.veil-card,
+.accessory-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border:
+    1px solid rgba(149, 119, 72, 0.30);
+
+  box-shadow:
+    0 10px 30px rgba(47, 41, 37, 0.07);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.veil-card:hover,
+.accessory-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(149, 119, 72, 0.50);
+
+  box-shadow:
+    0 18px 42px rgba(47, 41, 37, 0.10);
+}
+
+/*
+   The image compartment is visually separated from the name/copy
+   so each title clearly belongs to the image directly above it.
+*/
+
+.veil-card .product-card-image,
+.accessory-card .product-card-image {
+  height: 430px;
+
+  padding: 22px;
+
+  background: #f5f2ed;
+
+  border-bottom:
+    1px solid rgba(149, 119, 72, 0.26);
+}
+
+.veil-card .product-card-image img,
+.accessory-card .product-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.veil-card-content,
+.accessory-card-content {
+  min-height: 185px;
+
+  padding: 25px 28px 29px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: var(--white);
+
+  text-align: center;
+}
+
+.veil-card-content .product-card-category,
+.accessory-card-content .product-card-category {
+  display: block;
+
+  margin-bottom: 8px;
+
+  text-align: center;
+}
+
+.veil-card-content h3,
+.accessory-card-content h3 {
+  margin:
+    0 auto 10px;
+
+  font-size: 2rem;
+
+  text-align: center;
+}
+
+.veil-card-content > p,
+.accessory-card-content > p {
+  max-width: 430px;
+
+  margin:
+    0 auto;
+
+  font-size: 0.85rem;
+  line-height: 1.68;
+
+  text-align: center;
+}
+
+
+/* Add a little more space between rows so cards don't visually merge. */
+
+.veil-catalog-grid,
+.accessories-catalog-grid {
+  gap: 38px 30px;
+}
+
+
+/* =========================================================
+   04. PRESERVE NUMBER REMOVAL
+========================================================= */
+
+.collection-number,
+.dress-card-number,
+.service-number,
+.service-experience-number,
+.contact-option-number {
+  display: none !important;
+}
+
+
+/* =========================================================
+   05. PRESERVE CENTERED FLIP INSTRUCTION
+========================================================= */
+
+.flip-note {
+  width: 100%;
+  max-width: 420px;
+
+  display: block;
+
+  margin: 18px auto 0 !important;
+  padding: 0 12px;
+
+  color: var(--text-light) !important;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 0.68rem !important;
+  font-style: italic;
+  font-weight: 400;
+
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+
+  text-align: center;
+  text-transform: none !important;
+}
+
+
+/* =========================================================
+   06. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-brand-grid,
+  .services-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-brand-grid {
+    gap: 42px;
+  }
+
+  .about-brand-logo-wrap {
+    max-width: 360px;
+  }
+
+  .services-experience-grid {
+    max-width: 680px;
+  }
+
+  .service-experience-image {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   07. MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .about-brand-section {
+    padding-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  .about-brand-logo-wrap {
+    max-width: 310px;
+    min-height: 270px;
+
+    padding: 26px;
+  }
+
+  .about-brand-logo {
+    width: min(100%, 205px);
+    max-height: 225px;
+  }
+
+  .services-experience-grid {
+    gap: 24px;
+  }
+
+  .service-experience-image {
+    height: 260px;
+    padding: 14px;
+  }
+
+  .service-experience-content {
+    padding: 25px 22px 28px;
+  }
+
+  .service-experience-content .service-details > div {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .service-experience-content .service-details strong {
+    text-align: left;
+  }
+
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    height: 370px;
+  }
+
+  .veil-catalog-grid,
+  .accessories-catalog-grid {
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   08. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+
+  .about-brand-logo-wrap {
+    max-width: 280px;
+    min-height: 245px;
+  }
+
+  .about-brand-logo {
+    width: min(100%, 185px);
+  }
+
+  .service-experience-image {
+    height: 235px;
+  }
+
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    height: 330px;
+  }
+
+}
