@@ -1,38 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-  <title>Velos | D'Leon Designs</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
 
-  <!-- Google Tag Manager -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Velos de Novia | D'Leon Designs Quito</title>
+
+  <meta
+    name="description"
+    content="Explora la colección de velos de novia de D'Leon Designs en Quito. Descubre diseños elegantes y delicados para complementar tu look bridal."
+  >
+
+
+  <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"
+  >
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       ICONS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+
+  <!-- =====================================================
+       MAIN STYLESHEET
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- =====================================================
+       GOOGLE TAG MANAGER
+  ====================================================== -->
+
   <script>
     (function(w,d,s,l,i){
+
       w[l]=w[l]||[];
+
       w[l].push({
         'gtm.start': new Date().getTime(),
         event:'gtm.js'
       });
 
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer' ? '&l='+l : '';
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
 
       j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
 
       f.parentNode.insertBefore(j,f);
 
     })(window,document,'script','dataLayer','GTM-MMBTLQ2B');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"
+  ></script>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer =
+      window.dataLayer || [];
 
     function gtag(){
       dataLayer.push(arguments);
@@ -40,162 +122,480 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-RLLWJSPPRX');
+    gtag(
+      'config',
+      'G-RLLWJSPPRX'
+    );
+
   </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link rel="icon"
-  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"><text y=".9em"
-  font-size="90">💍</text></svg>'>
 
 </head>
 
-<body>
 
-<!-- Google Tag Manager (noscript) -->
+<body class="collection-page">
+
+
+<!-- =========================================================
+     GOOGLE TAG MANAGER — NOSCRIPT
+========================================================= -->
+
 <noscript>
+
   <iframe
     src="https://www.googletagmanager.com/ns.html?id=GTM-MMBTLQ2B"
     height="0"
     width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
+    style="display:none;visibility:hidden"
+  ></iframe>
+
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<nav>
 
-  <div class="logo-area">
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <a href="index.html" class="logo">D'Leon Designs</a>
+<header
+  class="site-header"
+  id="siteHeader"
+>
 
-    <a class="top-social-icon"
-       href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+  <div class="nav-container">
 
-      <i class="fa-brands fa-instagram"></i>
+
+    <!-- BRAND -->
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="D'Leon Designs - Inicio"
+    >
+
+      <span class="brand-name">
+        D'Leon Designs
+      </span>
+
+      <span class="brand-subtitle">
+        Private Bridal Studio
+      </span>
 
     </a>
 
-    <a class="top-social-icon"
-       href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
 
-      <i class="fa-brands fa-tiktok"></i>
+    <!-- DESKTOP NAV -->
 
-    </a>
+    <nav
+      class="desktop-nav"
+      aria-label="Navegación principal"
+    >
+
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a
+        href="veils.html"
+        class="active"
+      >
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+      <div class="header-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de D'Leon Designs"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok de D'Leon Designs"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="header-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar cita
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
 
   </div>
 
-  <button class="menu-toggle" onclick="toggleMenu()">
 
-    <i class="fa-solid fa-bars"></i>
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
 
-  </button>
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
 
-  <div class="nav-menu" id="navMenu">
+    <nav aria-label="Navegación móvil">
 
-    <a href="dresses.html">Vestidos</a>
-    <a href="veils.html">Velos</a>
-    <a href="accessories.html">Accesorios</a>
-    <a href="services.html">Servicios</a>
-    <a href="contact.html">Contacto</a>
-    <a href="about.html">Nuestra Esencia</a>
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <div class="mobile-menu-footer">
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="btn btn-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
+
+
+      <div class="mobile-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
-</nav>
+</header>
 
-<section class="section">
 
-  <h2>Velos de Novia</h2>
 
-  <p>
-    Descubre velos elegantes y delicados diseñados para complementar tu vestido perfecto.
-  </p>
+<main>
 
-  <div class="grid">
 
-    <!-- VELO 1 -->
+<!-- =========================================================
+     VEILS HERO
+========================================================= -->
 
-    <div class="card">
+<section class="collection-page-hero">
 
-      <img src="images/Velos1.jpg"
-           class="card-img"
-           alt="Velo Clásico"
-           style="object-fit: contain;
-                  object-position: center center;
-                  background-color: #f5f5f5;">
+  <div
+    class="section-container collection-page-hero-inner reveal"
+  >
 
-      <h3>Velo Clásico</h3>
+    <p class="eyebrow">
+      El Detalle
+    </p>
+
+    <h1>
+      Velos de Novia
+    </h1>
+
+    <p>
+      El detalle que transforma un vestido en un look bridal
+      completo. Descubre nuestra selección de velos elegantes,
+      románticos y delicados.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VEIL COLLECTION
+========================================================= -->
+
+<section class="section collection-catalog-section">
+
+  <div class="section-container">
+
+
+    <!-- COLLECTION INTRO -->
+
+    <div class="catalog-intro reveal">
+
+      <p class="eyebrow">
+        La Colección
+      </p>
+
+      <h2>
+        El toque final
+        <span>para tu momento.</span>
+      </h2>
 
       <p>
-        Un diseño elegante y atemporal para una novia sofisticada.
+        Cada velo ha sido seleccionado para complementar
+        diferentes estilos de vestido y ayudarte a crear
+        una imagen bridal elegante, armoniosa y personal.
       </p>
 
     </div>
 
-    <!-- VELO 2 -->
 
-    <div class="card">
 
-      <img src="images/Velos2.jpg"
-           class="card-img"
-           alt="Velo Romance"
-           style="object-fit: contain;
-                  object-position: center center;
-                  background-color: #f5f5f5;">
+    <!-- =====================================================
+         VEIL GRID
+    ====================================================== -->
 
-      <h3>Velo Romance</h3>
+    <div class="grid veil-catalog-grid">
 
-      <p>
-        Encaje delicado y caída suave para una apariencia romántica.
-      </p>
 
-    </div>
+      <!-- =================================================
+           VELO 01
+      ================================================== -->
 
-    <!-- VELO 3 -->
+      <article class="card veil-card reveal">
 
-    <div class="card">
+        <div class="product-card-image">
 
-      <img src="images/Velos3.jpg"
-           class="card-img"
-           alt="Velo Elegance"
-           style="object-fit: contain;
-                  object-position: center center;
-                  background-color: #f5f5f5;">
+          <img
+            src="images/Velos1.jpg"
+            alt="Velo Clásico de D'Leon Designs"
+            loading="lazy"
+          >
 
-      <h3>Velo Elegance</h3>
+        </div>
 
-      <p>
-        Un velo sofisticado pensado para complementar un look bridal refinado.
-      </p>
 
-    </div>
+        <div class="veil-card-content">
 
-    <!-- VELO 4 -->
+          <span class="dress-card-number">
+            01
+          </span>
 
-    <div class="card">
+          <span class="product-card-category">
+            Colección de Velos
+          </span>
 
-      <img src="images/Velos4.jpg"
-           class="card-img"
-           alt="Velo Cascada"
-           style="object-fit: contain;
-                  object-position: center center;
-                  background-color: #f5f5f5;">
+          <h3>
+            Velo Clásico
+          </h3>
 
-      <h3>Velo Cascada</h3>
+          <p>
+            Un diseño elegante y atemporal para una novia
+            sofisticada.
+          </p>
 
-      <p>
-        Un velo con caída suave y elegante que aporta movimiento,
-        romanticismo y un toque sofisticado a tu look bridal.
-      </p>
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           VELO 02
+      ================================================== -->
+
+      <article class="card veil-card reveal">
+
+        <div class="product-card-image">
+
+          <img
+            src="images/Velos2.jpg"
+            alt="Velo Romance de D'Leon Designs"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="veil-card-content">
+
+          <span class="dress-card-number">
+            02
+          </span>
+
+          <span class="product-card-category">
+            Colección de Velos
+          </span>
+
+          <h3>
+            Velo Romance
+          </h3>
+
+          <p>
+            Encaje delicado y caída suave para una apariencia
+            romántica.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           VELO 03
+      ================================================== -->
+
+      <article class="card veil-card reveal">
+
+        <div class="product-card-image">
+
+          <img
+            src="images/Velos3.jpg"
+            alt="Velo Elegance de D'Leon Designs"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="veil-card-content">
+
+          <span class="dress-card-number">
+            03
+          </span>
+
+          <span class="product-card-category">
+            Colección de Velos
+          </span>
+
+          <h3>
+            Velo Elegance
+          </h3>
+
+          <p>
+            Un velo sofisticado pensado para complementar
+            un look bridal refinado.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           VELO 04
+      ================================================== -->
+
+      <article class="card veil-card reveal">
+
+        <div class="product-card-image">
+
+          <img
+            src="images/Velos4.jpg"
+            alt="Velo Cascada de D'Leon Designs"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="veil-card-content">
+
+          <span class="dress-card-number">
+            04
+          </span>
+
+          <span class="product-card-category">
+            Colección de Velos
+          </span>
+
+          <h3>
+            Velo Cascada
+          </h3>
+
+          <p>
+            Un velo con caída suave y elegante que aporta
+            movimiento, romanticismo y un toque sofisticado
+            a tu look bridal.
+          </p>
+
+        </div>
+
+      </article>
+
 
     </div>
 
@@ -203,72 +603,245 @@
 
 </section>
 
-<footer>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
 
-    Correo:
+<!-- =========================================================
+     VEIL CTA
+========================================================= -->
 
-    <a href="mailto:designsdleon@gmail.com"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+<section class="bridal-cta">
 
-      designsdleon@gmail.com
+  <div class="bridal-cta-inner reveal">
 
-    </a>
+    <p class="eyebrow">
+      Completa tu look
+    </p>
 
-  </p>
+    <h2>
+      Encuentra el velo
+      <span>que se sienta como tú.</span>
+    </h2>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+    <p>
+      Durante tu cita privada podrás explorar nuestros velos
+      junto con diferentes vestidos y accesorios para descubrir
+      la combinación que mejor complete tu estilo.
+    </p>
 
-    WhatsApp:
 
-    <a href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20velos%20de%20D%27Leon%20Designs."
-       target="_blank"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+    <div class="cta-actions">
 
-      98 536 5883
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20quiero%20agendar%20una%20cita%20para%20conocer%20los%20velos%20de%20D%27Leon%20Designs."
+        class="btn btn-light"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
 
-    </a>
 
-  </p>
+      <a
+        href="dresses.html"
+        class="btn btn-outline-light"
+      >
+        Ver vestidos
+      </a>
 
-  <div class="footer-socials">
+    </div>
 
-    <a href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+  </div>
 
-      <i class="fa-brands fa-instagram"></i>
+</section>
 
-    </a>
 
-    <a href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
+</main>
 
-      <i class="fa-brands fa-tiktok"></i>
 
-    </a>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+  <div class="section-container footer-grid">
+
+
+    <!-- BRAND -->
+
+    <div class="footer-brand">
+
+      <a
+        href="index.html"
+        class="footer-logo"
+      >
+        D'Leon Designs
+      </a>
+
+      <p>
+        Private Bridal Studio
+      </p>
+
+      <span>
+        Quito, Ecuador
+      </span>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div class="footer-column">
+
+      <h3>
+        Explora
+      </h3>
+
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+    </div>
+
+
+
+    <!-- D'LEON -->
+
+    <div class="footer-column">
+
+      <h3>
+        D'Leon
+      </h3>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <div class="footer-column footer-contact">
+
+      <h3>
+        Reserva
+      </h3>
+
+      <a href="mailto:designsdleon@gmail.com">
+        designsdleon@gmail.com
+      </a>
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        +593 98 536 5883
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="section-container footer-bottom">
+
+    <p>
+      © <span id="currentYear"></span> D'Leon Designs.
+      Todos los derechos reservados.
+    </p>
+
+
+    <div class="footer-social-icons">
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de D'Leon Designs"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok de D'Leon Designs"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+    </div>
 
   </div>
 
 </footer>
 
-<a class="floating-whatsapp"
-   href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20velos%20de%20D%27Leon%20Designs."
-   target="_blank">
 
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20velos%20de%20D%27Leon%20Designs."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar D'Leon Designs por WhatsApp"
+>
   <i class="fa-brands fa-whatsapp"></i>
-
 </a>
 
-<script>
 
-  function toggleMenu() {
 
-    document.getElementById("navMenu").classList.toggle("show-menu");
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
-  }
+<script src="js/script.js"></script>
 
-</script>
 
 </body>
+
 </html>
