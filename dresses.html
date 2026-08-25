@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-  <title>Vestidos | D'Leon Designs</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
 
-  <!-- Google Tag Manager -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Vestidos de Novia | D'Leon Designs Quito</title>
+
+  <meta
+    name="description"
+    content="Explora la colección de vestidos de novia de D'Leon Designs en Quito. Descubre diseños elegantes dentro de una experiencia bridal privada y personalizada."
+  >
+
+
+  <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"
+  >
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       ICONS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+
+  <!-- =====================================================
+       MAIN STYLESHEET
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- =====================================================
+       GOOGLE TAG MANAGER
+  ====================================================== -->
+
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
@@ -14,8 +86,8 @@
       });
 
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer' ? '&l='+l : '';
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
 
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
@@ -24,12 +96,16 @@
 
     })(window,document,'script','dataLayer','GTM-MMBTLQ2B');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"
+  ></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,426 +115,760 @@
     }
 
     gtag('js', new Date());
-
     gtag('config', 'G-RLLWJSPPRX');
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link rel="icon"
-  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"><text y=".9em"
-  font-size="90">💍</text></svg>'>
-
 </head>
 
-<body>
 
-<!-- Google Tag Manager (noscript) -->
+<body class="collection-page">
+
+
+<!-- =========================================================
+     GOOGLE TAG MANAGER — NOSCRIPT
+========================================================= -->
+
 <noscript>
   <iframe
     src="https://www.googletagmanager.com/ns.html?id=GTM-MMBTLQ2B"
     height="0"
     width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
+    style="display:none;visibility:hidden"
+  ></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<nav>
 
-  <div class="logo-area">
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <a href="index.html" class="logo">D'Leon Designs</a>
+<header class="site-header" id="siteHeader">
 
-    <a class="top-social-icon"
-       href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+  <div class="nav-container">
 
-      <i class="fa-brands fa-instagram"></i>
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="D'Leon Designs - Inicio"
+    >
+      <span class="brand-name">
+        D'Leon Designs
+      </span>
 
+      <span class="brand-subtitle">
+        Private Bridal Studio
+      </span>
     </a>
 
-    <a class="top-social-icon"
-       href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
 
-      <i class="fa-brands fa-tiktok"></i>
+    <nav
+      class="desktop-nav"
+      aria-label="Navegación principal"
+    >
+      <a href="dresses.html" class="active">
+        Vestidos
+      </a>
 
-    </a>
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+    </nav>
+
+
+    <div class="header-actions">
+
+      <div class="header-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de D'Leon Designs"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok de D'Leon Designs"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="header-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar cita
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
 
   </div>
 
-  <button class="menu-toggle" onclick="toggleMenu()">
 
-    <i class="fa-solid fa-bars"></i>
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
 
-  </button>
+    <nav aria-label="Navegación móvil">
 
-  <div class="nav-menu" id="navMenu">
+      <a href="dresses.html">
+        Vestidos
+      </a>
 
-    <a href="dresses.html">Vestidos</a>
-    <a href="veils.html">Velos</a>
-    <a href="accessories.html">Accesorios</a>
-    <a href="services.html">Servicios</a>
-    <a href="contact.html">Contacto</a>
-    <a href="about.html">Nuestra Esencia</a>
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <div class="mobile-menu-footer">
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="btn btn-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
+
+
+      <div class="mobile-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
-</nav>
+</header>
 
-<section class="section">
 
-  <h2>Vestidos de Novia</h2>
+<main>
 
-  <p>
-    Explora nuestra colección y encuentra el vestido perfecto para tu gran día.
-  </p>
 
-  <div class="grid">
+<!-- =========================================================
+     COLLECTION HERO
+========================================================= -->
 
-    <!-- VESTIDO 1 -->
+<section class="collection-page-hero">
 
-    <div class="card dress-card">
+  <div class="section-container collection-page-hero-inner reveal">
 
-      <div class="flip-card">
-        <div class="flip-inner">
+    <p class="eyebrow">
+      Colección Bridal
+    </p>
 
-          <div class="flip-front">
+    <h1>
+      Vestidos de Novia
+    </h1>
 
-            <img src="images/vestido1.jpg"
-                 class="flip-img"
-                 alt="Vestido Aurora frente">
+    <p>
+      Explora una selección pensada para distintos estilos de novia.
+      Cada diseño puede verse de frente y de espalda para ayudarte
+      a apreciar mejor sus detalles.
+    </p>
 
-          </div>
+  </div>
 
-          <div class="flip-back">
+</section>
 
-            <img src="images/Vestido1Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Aurora espalda">
 
-          </div>
+<!-- =========================================================
+     DRESS COLLECTION
+========================================================= -->
 
-        </div>
-      </div>
+<section class="section collection-catalog-section">
 
-      <h3>Vestido Aurora</h3>
+  <div class="section-container">
+
+    <div class="catalog-intro reveal">
+
+      <p class="eyebrow">
+        Encuentra el indicado
+      </p>
+
+      <h2>
+        Diseños para diferentes formas
+        <span>de sentirte tú.</span>
+      </h2>
 
       <p>
-        Un diseño elegante y romántico para una novia clásica.
+        Nuestra colección reúne siluetas románticas, clásicas,
+        modernas y sofisticadas dentro de una experiencia privada
+        y personalizada en Quito.
       </p>
 
     </div>
 
-    <!-- VESTIDO 2 -->
 
-    <div class="card dress-card">
+    <div class="grid dress-catalog-grid">
 
-      <div class="flip-card">
-        <div class="flip-inner">
 
-          <div class="flip-front">
+      <!-- VESTIDO AURORA -->
+      <article class="card dress-card reveal">
 
-            <img src="images/vestido2.jpg"
-                 class="flip-img"
-                 alt="Vestido Luna frente">
+        <div class="flip-card" aria-label="Vestido Aurora: vista frontal y posterior">
 
-          </div>
+          <div class="flip-inner">
 
-          <div class="flip-back">
+            <div class="flip-front">
+              <img
+                src="images/vestido1.jpg"
+                class="flip-img"
+                alt="Vestido Aurora frente"
+                loading="lazy"
+              >
+            </div>
 
-            <img src="images/Vestido2Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Luna espalda">
-
-          </div>
-
-        </div>
-      </div>
-
-      <h3>Vestido Luna</h3>
-
-      <p>
-        Una opción delicada con un estilo moderno y sofisticado.
-      </p>
-
-    </div>
-
-    <!-- VESTIDO 3 -->
-
-    <div class="card dress-card">
-
-      <div class="flip-card">
-        <div class="flip-inner">
-
-          <div class="flip-front">
-
-            <img src="images/Vestido3Front.jpg"
-                 class="flip-img"
-                 alt="Vestido Isabella frente">
-
-          </div>
-
-          <div class="flip-back">
-
-            <img src="images/Vestido3Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Isabella espalda">
+            <div class="flip-back">
+              <img
+                src="images/Vestido1Rear.jpg"
+                class="flip-img"
+                alt="Vestido Aurora espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Isabella</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Ideal para una novia que busca presencia y elegancia.
-      </p>
+          <span class="dress-card-number">01</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 4 -->
+          <h3>Vestido Aurora</h3>
 
-    <div class="card dress-card">
+          <p>Un diseño elegante y romántico para una novia clásica.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/vestido4.jpg"
-                 class="flip-img"
-                 alt="Vestido Valentina frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO LUNA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Luna: vista frontal y posterior">
 
-            <img src="images/Vestido4Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Valentina espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido2.jpg"
+                class="flip-img"
+                alt="Vestido Luna frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido2Rear.jpg"
+                class="flip-img"
+                alt="Vestido Luna espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Valentina</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Un vestido atemporal con detalles femeninos y refinados.
-      </p>
+          <span class="dress-card-number">02</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 5 -->
+          <h3>Vestido Luna</h3>
 
-    <div class="card dress-card">
+          <p>Una opción delicada con un estilo moderno y sofisticado.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/vestido5.jpg"
-                 class="flip-img"
-                 alt="Vestido Camila frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO ISABELLA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Isabella: vista frontal y posterior">
 
-            <img src="images/Vestido5Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Camila espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/Vestido3Front.jpg"
+                class="flip-img"
+                alt="Vestido Isabella frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido3Rear.jpg"
+                class="flip-img"
+                alt="Vestido Isabella espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Camila</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Perfecto para una novia elegante, fresca y natural.
-      </p>
+          <span class="dress-card-number">03</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 6 -->
+          <h3>Vestido Isabella</h3>
 
-    <div class="card dress-card">
+          <p>Ideal para una novia que busca presencia y elegancia.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/vestido6.jpg"
-                 class="flip-img"
-                 alt="Vestido Sofía frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO VALENTINA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Valentina: vista frontal y posterior">
 
-            <img src="images/Vestido6Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Sofía espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido4.jpg"
+                class="flip-img"
+                alt="Vestido Valentina frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido4Rear.jpg"
+                class="flip-img"
+                alt="Vestido Valentina espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Sofía</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Un diseño sofisticado para una experiencia bridal inolvidable.
-      </p>
+          <span class="dress-card-number">04</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 7 -->
+          <h3>Vestido Valentina</h3>
 
-    <div class="card dress-card">
+          <p>Un vestido atemporal con detalles femeninos y refinados.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/vestido7.jpg"
-                 class="flip-img"
-                 alt="Vestido Martina frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO CAMILA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Camila: vista frontal y posterior">
 
-            <img src="images/Vestido7Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Martina espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido5.jpg"
+                class="flip-img"
+                alt="Vestido Camila frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido5Rear.jpg"
+                class="flip-img"
+                alt="Vestido Camila espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Martina</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Una pieza elegante con un estilo suave y encantador.
-      </p>
+          <span class="dress-card-number">05</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 8 -->
+          <h3>Vestido Camila</h3>
 
-    <div class="card dress-card">
+          <p>Perfecto para una novia elegante, fresca y natural.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/SpaghettiStrapFront.jpg"
-                 class="flip-img"
-                 alt="Vestido Amelie frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO SOFÍA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Sofía: vista frontal y posterior">
 
-            <img src="images/SpaghettiStrapRear.jpg"
-                 class="flip-img"
-                 alt="Vestido Amelie espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido6.jpg"
+                class="flip-img"
+                alt="Vestido Sofía frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido6Rear.jpg"
+                class="flip-img"
+                alt="Vestido Sofía espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Amelie</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Diseño con tirantes delicados y un aire romántico.
-      </p>
+          <span class="dress-card-number">06</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 9 -->
+          <h3>Vestido Sofía</h3>
 
-    <div class="card dress-card">
+          <p>Un diseño sofisticado para una experiencia bridal inolvidable.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/vestido8.jpg"
-                 class="flip-img"
-                 alt="Vestido Elena frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO MARTINA -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Martina: vista frontal y posterior">
 
-            <img src="images/Vestido8Rear.jpg"
-                 class="flip-img"
-                 alt="Vestido Elena espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido7.jpg"
+                class="flip-img"
+                alt="Vestido Martina frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido7Rear.jpg"
+                class="flip-img"
+                alt="Vestido Martina espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Elena</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Un vestido pensado para una novia moderna y segura.
-      </p>
+          <span class="dress-card-number">07</span>
 
-    </div>
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
 
-    <!-- VESTIDO 10 -->
+          <h3>Vestido Martina</h3>
 
-    <div class="card dress-card">
+          <p>Una pieza elegante con un estilo suave y encantador.</p>
 
-      <div class="flip-card">
-        <div class="flip-inner">
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
 
-          <div class="flip-front">
+        </div>
 
-            <img src="images/StraplessFront.jpg"
-                 class="flip-img"
-                 alt="Vestido Bianca frente">
+      </article>
 
-          </div>
+      <!-- VESTIDO AMELIE -->
+      <article class="card dress-card reveal">
 
-          <div class="flip-back">
+        <div class="flip-card" aria-label="Vestido Amelie: vista frontal y posterior">
 
-            <img src="images/StraplessRear.jpg"
-                 class="flip-img"
-                 alt="Vestido Bianca espalda">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/SpaghettiStrapFront.jpg"
+                class="flip-img"
+                alt="Vestido Amelie frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/SpaghettiStrapRear.jpg"
+                class="flip-img"
+                alt="Vestido Amelie espalda"
+                loading="lazy"
+              >
+            </div>
 
           </div>
 
         </div>
-      </div>
 
-      <h3>Vestido Bianca</h3>
+        <div class="dress-card-content">
 
-      <p>
-        Un strapless elegante para una novia sofisticada.
-      </p>
+          <span class="dress-card-number">08</span>
+
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
+
+          <h3>Vestido Amelie</h3>
+
+          <p>Diseño con tirantes delicados y un aire romántico.</p>
+
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- VESTIDO ELENA -->
+      <article class="card dress-card reveal">
+
+        <div class="flip-card" aria-label="Vestido Elena: vista frontal y posterior">
+
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/vestido8.jpg"
+                class="flip-img"
+                alt="Vestido Elena frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/Vestido8Rear.jpg"
+                class="flip-img"
+                alt="Vestido Elena espalda"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="dress-card-content">
+
+          <span class="dress-card-number">09</span>
+
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
+
+          <h3>Vestido Elena</h3>
+
+          <p>Un vestido pensado para una novia moderna y segura.</p>
+
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- VESTIDO BIANCA -->
+      <article class="card dress-card reveal">
+
+        <div class="flip-card" aria-label="Vestido Bianca: vista frontal y posterior">
+
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <img
+                src="images/StraplessFront.jpg"
+                class="flip-img"
+                alt="Vestido Bianca frente"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="flip-back">
+              <img
+                src="images/StraplessRear.jpg"
+                class="flip-img"
+                alt="Vestido Bianca espalda"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="dress-card-content">
+
+          <span class="dress-card-number">10</span>
+
+          <span class="product-card-category">
+            Colección Bridal
+          </span>
+
+          <h3>Vestido Bianca</h3>
+
+          <p>Un strapless elegante para una novia sofisticada.</p>
+
+          <span class="flip-note">
+            Pasa el cursor sobre la imagen para ver la parte posterior.
+          </span>
+
+        </div>
+
+      </article>
+
 
     </div>
 
@@ -466,72 +876,221 @@
 
 </section>
 
-<footer>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+<!-- =========================================================
+     COLLECTION CTA
+========================================================= -->
 
-    Correo:
+<section class="bridal-cta">
 
-    <a href="mailto:designsdleon@gmail.com"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+  <div class="bridal-cta-inner reveal">
 
-      designsdleon@gmail.com
+    <p class="eyebrow">
+      Pruébatelos en persona
+    </p>
 
-    </a>
+    <h2>
+      ¿Encontraste uno que
+      <span>quieres conocer mejor?</span>
+    </h2>
 
-  </p>
+    <p>
+      Reserva una cita privada para explorar la colección
+      con tranquilidad y atención personalizada.
+    </p>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+    <div class="cta-actions">
 
-    WhatsApp:
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20quiero%20agendar%20una%20cita%20para%20probarme%20vestidos%20de%20D%27Leon%20Designs."
+        class="btn btn-light"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
 
-    <a href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs."
-       target="_blank"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+      <a
+        href="services.html"
+        class="btn btn-outline-light"
+      >
+        Ver servicios
+      </a>
 
-      98 536 5883
+    </div>
 
-    </a>
+  </div>
 
-  </p>
+</section>
 
-  <div class="footer-socials">
 
-    <a href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+</main>
 
-      <i class="fa-brands fa-instagram"></i>
 
-    </a>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-    <a href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
+<footer class="site-footer">
 
-      <i class="fa-brands fa-tiktok"></i>
+  <div class="section-container footer-grid">
 
-    </a>
+    <div class="footer-brand">
+
+      <a
+        href="index.html"
+        class="footer-logo"
+      >
+        D'Leon Designs
+      </a>
+
+      <p>
+        Private Bridal Studio
+      </p>
+
+      <span>
+        Quito, Ecuador
+      </span>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        Explora
+      </h3>
+
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        D'Leon
+      </h3>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+    </div>
+
+
+    <div class="footer-column footer-contact">
+
+      <h3>
+        Reserva
+      </h3>
+
+      <a href="mailto:designsdleon@gmail.com">
+        designsdleon@gmail.com
+      </a>
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        +593 98 536 5883
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="section-container footer-bottom">
+
+    <p>
+      © <span id="currentYear"></span> D'Leon Designs.
+      Todos los derechos reservados.
+    </p>
+
+    <div class="footer-social-icons">
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de D'Leon Designs"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok de D'Leon Designs"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+    </div>
 
   </div>
 
 </footer>
 
-<a class="floating-whatsapp"
-   href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20y%20la%20experiencia%20de%20D%27Leon%20Designs."
-   target="_blank">
 
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20vestidos%20de%20novia%20de%20D%27Leon%20Designs."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar D'Leon Designs por WhatsApp"
+>
   <i class="fa-brands fa-whatsapp"></i>
-
 </a>
 
-<script>
 
-  function toggleMenu() {
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
-    document.getElementById("navMenu").classList.toggle("show-menu");
+<script src="js/script.js"></script>
 
-  }
-
-</script>
 
 </body>
 </html>
