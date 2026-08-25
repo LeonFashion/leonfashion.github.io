@@ -4461,3 +4461,629 @@ a.contact-option-link:hover {
   }
 
 }
+
+   /* =========================================================
+   D'LEON DESIGNS
+   FINAL CATALOG CARD LAYOUT
+   Dresses / Veils / Accessories
+
+   Paste at the VERY BOTTOM of style.css
+========================================================= */
+
+
+/* =========================================================
+   01. CATALOG WIDTH + TWO-COLUMN LAYOUT
+========================================================= */
+
+.catalog-section .section-container {
+  width: min(calc(100% - 64px), 1120px);
+}
+
+
+/*
+   Keep all three product collections in two columns
+   on desktop.
+
+   The columns are intentionally narrower than the
+   available page width to create visible space
+   between individual products.
+*/
+
+.catalog-grid,
+.products-grid,
+.veil-catalog-grid,
+.accessories-catalog-grid {
+  width: 100%;
+  max-width: 1040px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 480px));
+
+  justify-content: center;
+
+  column-gap: 64px;
+  row-gap: 58px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   02. ALL CATALOG CARDS
+========================================================= */
+
+.dress-card,
+.catalog-card,
+.veil-card,
+.accessory-card {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border:
+    1px solid rgba(149, 119, 72, 0.30);
+
+  box-shadow:
+    0 10px 28px rgba(47, 41, 37, 0.055);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+
+.dress-card:hover,
+.catalog-card:hover,
+.veil-card:hover,
+.accessory-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(149, 119, 72, 0.52);
+
+  box-shadow:
+    0 18px 40px rgba(47, 41, 37, 0.09);
+}
+
+
+/* =========================================================
+   03. DRESS IMAGE / FLIP AREA
+========================================================= */
+
+/*
+   Reduces the old 520px image compartment.
+
+   This keeps the dress large enough to appreciate,
+   but makes two products comfortably visible on screen.
+*/
+
+.dress-card .dress-image-wrap,
+.dress-card .flip-card,
+.catalog-card .dress-image-wrap,
+.catalog-card .flip-card {
+  width: 100%;
+  height: 440px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  perspective: 1200px;
+
+  background: #f5f2ed;
+
+  border-bottom:
+    1px solid rgba(149, 119, 72, 0.24);
+}
+
+
+/* Front/back dress photos */
+
+.dress-card .flip-img,
+.catalog-card .flip-img {
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #f5f2ed;
+}
+
+
+/* =========================================================
+   04. VEIL + ACCESSORY IMAGE AREA
+========================================================= */
+
+.veil-card .product-card-image,
+.accessory-card .product-card-image {
+  width: 100%;
+  height: 420px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 20px;
+
+  background: #f5f2ed;
+
+  border-bottom:
+    1px solid rgba(149, 119, 72, 0.26);
+}
+
+
+.veil-card .product-card-image img,
+.accessory-card .product-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* =========================================================
+   05. CARD COPY AREA
+========================================================= */
+
+/*
+   Image + title + description now clearly read as
+   ONE individual product card.
+*/
+
+.dress-card-content,
+.catalog-card-content,
+.veil-card-content,
+.accessory-card-content {
+  flex: 1;
+
+  min-height: 170px;
+
+  padding:
+    25px 27px 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: var(--white);
+
+  text-align: center;
+}
+
+
+/* Product category */
+
+.product-card-category,
+.dress-card-content .eyebrow,
+.catalog-card-content .eyebrow {
+  margin:
+    0 auto 8px;
+
+  color: var(--champagne-dark);
+
+  font-size: 0.63rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* Product name */
+
+.dress-card-content h3,
+.catalog-card-content h3,
+.veil-card-content h3,
+.accessory-card-content h3 {
+  margin:
+    0 auto 10px;
+
+  color: var(--espresso);
+
+  font-size:
+    clamp(1.8rem, 2.5vw, 2.15rem);
+
+  line-height: 1.08;
+
+  text-align: center;
+}
+
+
+/* Product description */
+
+.dress-card-content > p:not(.flip-note):not(.eyebrow),
+.catalog-card-content > p:not(.flip-note):not(.eyebrow),
+.veil-card-content > p,
+.accessory-card-content > p {
+  width: 100%;
+  max-width: 390px;
+
+  margin:
+    0 auto;
+
+  color: var(--text-soft);
+
+  font-size: 0.84rem;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   06. FLIP INSTRUCTION
+========================================================= */
+
+/*
+   "Pasa el cursor..."
+   Smaller, centered and italicized.
+*/
+
+.flip-note {
+  width: 100%;
+  max-width: 360px;
+
+  display: block;
+
+  margin:
+    16px auto 0 !important;
+
+  padding:
+    0 8px;
+
+  color:
+    var(--text-light) !important;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size:
+    0.65rem !important;
+
+  font-style: italic;
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  line-height: 1.45;
+
+  text-align: center;
+
+  text-transform:
+    none !important;
+}
+
+
+/* =========================================================
+   07. REMOVE ALL PRODUCT ENUMERATION
+========================================================= */
+
+.collection-number,
+.dress-card-number,
+.catalog-card-number,
+.product-card-number,
+.veil-card-number,
+.accessory-card-number {
+  display: none !important;
+}
+
+
+/* =========================================================
+   08. CATALOG INTRO SPACING
+========================================================= */
+
+/*
+   Slightly tighter introduction so visitors reach
+   the products faster.
+*/
+
+.catalog-section {
+  padding-top: 85px;
+  padding-bottom: 110px;
+}
+
+
+.catalog-intro {
+  max-width: 720px;
+
+  margin:
+    0 auto 52px;
+
+  text-align: center;
+}
+
+
+.catalog-intro h2 {
+  margin:
+    12px 0 19px;
+}
+
+
+.catalog-intro > p:not(.eyebrow) {
+  max-width: 600px;
+
+  margin:
+    0 auto;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   09. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1250px) {
+
+  .catalog-grid,
+  .products-grid,
+  .veil-catalog-grid,
+  .accessories-catalog-grid {
+    max-width: 1060px;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 485px));
+
+    column-gap: 72px;
+    row-gap: 62px;
+  }
+
+}
+
+
+/* =========================================================
+   10. TABLET
+========================================================= */
+
+/*
+   Keep TWO columns longer than before.
+
+   Your previous CSS switched the catalog to one column
+   at 820px. This version allows two products side-by-side
+   on tablets where there is enough room.
+*/
+
+@media (max-width: 900px) and (min-width: 681px) {
+
+  .catalog-section .section-container {
+    width:
+      calc(100% - 40px);
+  }
+
+
+  .catalog-grid,
+  .products-grid,
+  .veil-catalog-grid,
+  .accessories-catalog-grid {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap: 26px;
+    row-gap: 38px;
+  }
+
+
+  .dress-card,
+  .catalog-card,
+  .veil-card,
+  .accessory-card {
+    max-width: none;
+  }
+
+
+  .dress-card .dress-image-wrap,
+  .dress-card .flip-card,
+  .catalog-card .dress-image-wrap,
+  .catalog-card .flip-card {
+    height: 390px;
+  }
+
+
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    height: 380px;
+  }
+
+
+  .dress-card-content,
+  .catalog-card-content,
+  .veil-card-content,
+  .accessory-card-content {
+    min-height: 165px;
+
+    padding:
+      23px 20px 25px;
+  }
+
+
+  .dress-card-content h3,
+  .catalog-card-content h3,
+  .veil-card-content h3,
+  .accessory-card-content h3 {
+    font-size: 1.85rem;
+  }
+
+}
+
+
+/* =========================================================
+   11. MOBILE
+========================================================= */
+
+/*
+   Phones return to ONE column.
+
+   Trying to squeeze two bridal photographs side-by-side
+   onto a phone would make the dresses too small to inspect.
+*/
+
+@media (max-width: 680px) {
+
+  .catalog-section {
+    padding-top: 62px;
+    padding-bottom: 80px;
+  }
+
+
+  .catalog-section .section-container {
+    width:
+      min(calc(100% - 36px), 460px);
+  }
+
+
+  .catalog-grid,
+  .products-grid,
+  .veil-catalog-grid,
+  .accessories-catalog-grid {
+    width: 100%;
+
+    grid-template-columns:
+      1fr !important;
+
+    gap:
+      34px !important;
+  }
+
+
+  .dress-card,
+  .catalog-card,
+  .veil-card,
+  .accessory-card {
+    width: 100%;
+    max-width: 440px;
+
+    margin:
+      0 auto;
+  }
+
+
+  .dress-card .dress-image-wrap,
+  .dress-card .flip-card,
+  .catalog-card .dress-image-wrap,
+  .catalog-card .flip-card {
+    height: 410px;
+  }
+
+
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    height: 390px;
+  }
+
+
+  .dress-card-content,
+  .catalog-card-content,
+  .veil-card-content,
+  .accessory-card-content {
+    min-height: auto;
+
+    padding:
+      23px 21px 26px;
+  }
+
+
+  .dress-card-content h3,
+  .catalog-card-content h3,
+  .veil-card-content h3,
+  .accessory-card-content h3 {
+    font-size: 1.9rem;
+  }
+
+
+  .flip-note {
+    max-width: 300px;
+
+    margin-top:
+      14px !important;
+
+    font-size:
+      0.63rem !important;
+  }
+
+}
+
+
+/* =========================================================
+   12. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+
+  .catalog-section .section-container {
+    width:
+      calc(100% - 28px);
+  }
+
+
+  .dress-card .dress-image-wrap,
+  .dress-card .flip-card,
+  .catalog-card .dress-image-wrap,
+  .catalog-card .flip-card {
+    height: 370px;
+  }
+
+
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    height: 350px;
+  }
+
+
+  .dress-card .flip-img,
+  .catalog-card .flip-img,
+  .veil-card .product-card-image,
+  .accessory-card .product-card-image {
+    padding: 14px;
+  }
+
+
+  .dress-card-content,
+  .catalog-card-content,
+  .veil-card-content,
+  .accessory-card-content {
+    padding:
+      21px 18px 24px;
+  }
+
+
+  .dress-card-content h3,
+  .catalog-card-content h3,
+  .veil-card-content h3,
+  .accessory-card-content h3 {
+    font-size: 1.75rem;
+  }
+
+}
+
+}
