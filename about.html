@@ -1,38 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-  <title>Nuestra Esencia | D'Leon Designs</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
 
-  <!-- Google Tag Manager -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Nuestra Esencia | D'Leon Designs Quito</title>
+
+  <meta
+    name="description"
+    content="Conoce la esencia de D'Leon Designs, una experiencia bridal privada en Quito creada para acompañar a cada novia con elegancia, cercanía y atención personalizada."
+  >
+
+
+  <!-- =====================================================
+       FAVICON
+  ====================================================== -->
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"
+  >
+
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       ICONS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+
+  <!-- =====================================================
+       MAIN STYLESHEET
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- =====================================================
+       GOOGLE TAG MANAGER
+  ====================================================== -->
+
   <script>
     (function(w,d,s,l,i){
+
       w[l]=w[l]||[];
+
       w[l].push({
         'gtm.start': new Date().getTime(),
         event:'gtm.js'
       });
 
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer' ? '&l='+l : '';
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
 
       j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
 
       f.parentNode.insertBefore(j,f);
 
     })(window,document,'script','dataLayer','GTM-MMBTLQ2B');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <link rel="stylesheet" href="style.css">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"></script>
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RLLWJSPPRX"
+  ></script>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer =
+      window.dataLayer || [];
 
     function gtag(){
       dataLayer.push(arguments);
@@ -40,215 +122,822 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-RLLWJSPPRX');
+    gtag(
+      'config',
+      'G-RLLWJSPPRX'
+    );
+
   </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link rel="icon"
-  href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"><text y=".9em"
-  font-size="90">💍</text></svg>'>
 
 </head>
 
-<body>
 
-<!-- Google Tag Manager (noscript) -->
+<body class="about-page">
+
+
+<!-- =========================================================
+     GOOGLE TAG MANAGER — NOSCRIPT
+========================================================= -->
+
 <noscript>
+
   <iframe
     src="https://www.googletagmanager.com/ns.html?id=GTM-MMBTLQ2B"
     height="0"
     width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
+    style="display:none;visibility:hidden"
+  ></iframe>
+
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<nav>
 
-  <div class="logo-area">
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <a href="index.html" class="logo">D'Leon Designs</a>
+<header
+  class="site-header"
+  id="siteHeader"
+>
 
-    <a class="top-social-icon"
-       href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+  <div class="nav-container">
 
-      <i class="fa-brands fa-instagram"></i>
+
+    <!-- BRAND -->
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="D'Leon Designs - Inicio"
+    >
+
+      <span class="brand-name">
+        D'Leon Designs
+      </span>
+
+      <span class="brand-subtitle">
+        Private Bridal Studio
+      </span>
 
     </a>
 
-    <a class="top-social-icon"
-       href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
 
-      <i class="fa-brands fa-tiktok"></i>
+    <!-- DESKTOP NAV -->
 
-    </a>
+    <nav
+      class="desktop-nav"
+      aria-label="Navegación principal"
+    >
 
-  </div>
+      <a href="dresses.html">
+        Vestidos
+      </a>
 
-  <button class="menu-toggle" onclick="toggleMenu()">
+      <a href="veils.html">
+        Velos
+      </a>
 
-    <i class="fa-solid fa-bars"></i>
+      <a href="accessories.html">
+        Accesorios
+      </a>
 
-  </button>
+      <a href="services.html">
+        Servicios
+      </a>
 
-  <div class="nav-menu" id="navMenu">
+      <a
+        href="about.html"
+        class="active"
+      >
+        Nuestra Esencia
+      </a>
 
-    <a href="dresses.html">Vestidos</a>
-    <a href="veils.html">Velos</a>
-    <a href="accessories.html">Accesorios</a>
-    <a href="services.html">Servicios</a>
-    <a href="about.html">Nuestra Esencia</a>
-    <a href="contact.html">Contacto</a>
+      <a href="contact.html">
+        Contacto
+      </a>
 
-  </div>
+    </nav>
 
-</nav>
 
-<section class="section">
+    <!-- HEADER ACTIONS -->
 
-  <h1>Nuestra Esencia</h1>
+    <div class="header-actions">
 
-  <p style="max-width: 950px; margin: 0 auto 35px auto; font-size: 1.25rem; line-height: 1.9;">
-    En D’Leon Designs creemos que encontrar el vestido perfecto debe ser una experiencia tan inolvidable como el día de tu boda.
-  </p>
+      <div class="header-socials">
 
-  <a href="index.html">
-    <img src="images/D'Leon Designs Logo.png"
-         alt="D'Leon Designs Logo"
-         style="width: 280px; max-width: 85%; display: block; margin: 45px auto 60px auto;">
-  </a>
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de D'Leon Designs"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
-  <div style="max-width: 950px; margin: 0 auto;">
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok de D'Leon Designs"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
 
-    <div style="margin-bottom: 65px;">
+      </div>
 
-      <h2>Nuestra Historia</h2>
 
-      <p style="font-size: 1.15rem; line-height: 2;">
-        D’Leon Designs nace con la intención de crear un espacio íntimo, elegante y memorable
-        para cada novia. Nuestro propósito es transformar la búsqueda del vestido en un momento
-        especial, lleno de emoción, confianza y belleza.
-      </p>
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="header-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar cita
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
 
     </div>
 
-    <div style="margin-bottom: 65px;">
+  </div>
 
-      <h2>Nuestra Filosofía</h2>
 
-      <p style="font-size: 1.15rem; line-height: 2;">
-        Creemos en una experiencia bridal personalizada, donde cada novia pueda sentirse escuchada,
-        acompañada y segura. Cada vestido, velo y accesorio es seleccionado con cuidado para ayudar
-        a crear un look que refleje la esencia de quien lo lleva.
-      </p>
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
 
-    </div>
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
 
-    <div style="margin-bottom: 65px;">
+    <nav aria-label="Navegación móvil">
 
-      <h2>Nuestra Promesa</h2>
+      <a href="dresses.html">
+        Vestidos
+      </a>
 
-      <p style="font-size: 1.15rem; line-height: 2;">
-        Prometemos acompañarte con honestidad, cercanía y dedicación durante uno de los momentos
-        más importantes antes de tu boda. Queremos que al decir sí a tu vestido, también digas sí
-        a una experiencia que recordarás con cariño.
-      </p>
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+    </nav>
+
+
+    <div class="mobile-menu-footer">
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20agendar%20una%20cita%20con%20D%27Leon%20Designs."
+        class="btn btn-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
+
+
+      <div class="mobile-socials">
+
+        <a
+          href="https://www.instagram.com/designsdleon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@dleondesigns"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+      </div>
 
     </div>
 
   </div>
 
-  <p style="font-family: 'Parisienne', cursive; font-size: 3rem; max-width: 900px; margin: 80px auto 55px auto; line-height: 1.4;">
-    Cada historia de amor merece un vestido inolvidable.
-  </p>
+</header>
 
-  <div style="margin-top: 40px;">
 
-    <a class="btn"
-       href="services.html">
 
-      Agenda Tu Experiencia
+<main>
 
-    </a>
+
+<!-- =========================================================
+     ABOUT HERO
+========================================================= -->
+
+<section class="about-page-hero">
+
+  <div
+    class="section-container about-page-hero-inner reveal"
+  >
+
+    <p class="eyebrow">
+      D'Leon Designs
+    </p>
+
+    <h1>
+      Nuestra Esencia
+    </h1>
+
+    <p class="about-hero-lead">
+      En D'Leon Designs creemos que encontrar el vestido perfecto
+      debe ser una experiencia tan inolvidable como el día de tu boda.
+    </p>
 
   </div>
 
 </section>
 
-<footer>
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
 
-    Correo:
+<!-- =========================================================
+     BRAND INTRO
+========================================================= -->
 
-    <a href="mailto:designsdleon@gmail.com"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+<section class="section about-brand-section">
 
-      designsdleon@gmail.com
+  <div class="section-container about-brand-grid">
 
-    </a>
 
-  </p>
+    <!-- LOGO -->
 
-  <p style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+    <div class="about-brand-logo-wrap reveal">
 
-    WhatsApp:
+      <a
+        href="index.html"
+        aria-label="Volver al inicio de D'Leon Designs"
+      >
 
-    <a href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
-       target="_blank"
-       style="font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
+        <img
+          src="images/D'Leon Designs Logo.png"
+          alt="Logo de D'Leon Designs"
+          class="about-brand-logo"
+          loading="lazy"
+        >
 
-      98 536 5883
+      </a>
 
-    </a>
+    </div>
 
-  </p>
 
-  <div class="footer-socials">
 
-    <a href="https://www.instagram.com/designsdleon/"
-       target="_blank">
+    <!-- COPY -->
 
-      <i class="fa-brands fa-instagram"></i>
+    <div class="about-brand-copy reveal">
 
-    </a>
+      <p class="eyebrow">
+        Más que un vestido
+      </p>
 
-    <a href="https://www.tiktok.com/@dleondesigns"
-       target="_blank">
+      <h2>
+        Un espacio pensado
+        <span>para hacerte sentir especial.</span>
+      </h2>
 
-      <i class="fa-brands fa-tiktok"></i>
+      <p>
+        D'Leon Designs nace con la intención de crear un espacio
+        íntimo, elegante y memorable para cada novia. Nuestro
+        propósito es transformar la búsqueda del vestido en un
+        momento especial, lleno de emoción, confianza y belleza.
+      </p>
 
-    </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR STORY / PHILOSOPHY / PROMISE
+========================================================= -->
+
+<section class="about-values-section">
+
+  <div class="section-container">
+
+
+    <div class="about-values-heading reveal">
+
+      <p class="eyebrow">
+        Lo que nos define
+      </p>
+
+      <h2>
+        Una experiencia construida
+        <span>alrededor de ti.</span>
+      </h2>
+
+    </div>
+
+
+
+    <div class="about-values-grid">
+
+
+      <!-- HISTORIA -->
+
+      <article class="about-value-card reveal">
+
+        <span class="about-value-number">
+          01
+        </span>
+
+        <p class="eyebrow">
+          Nuestra Historia
+        </p>
+
+        <h3>
+          Un comienzo con propósito.
+        </h3>
+
+        <p>
+          D'Leon Designs nace con la intención de crear un espacio
+          íntimo, elegante y memorable para cada novia. Nuestro
+          propósito es transformar la búsqueda del vestido en un
+          momento especial, lleno de emoción, confianza y belleza.
+        </p>
+
+      </article>
+
+
+
+      <!-- FILOSOFIA -->
+
+      <article class="about-value-card reveal">
+
+        <span class="about-value-number">
+          02
+        </span>
+
+        <p class="eyebrow">
+          Nuestra Filosofía
+        </p>
+
+        <h3>
+          Cada novia merece sentirse escuchada.
+        </h3>
+
+        <p>
+          Creemos en una experiencia bridal personalizada, donde
+          cada novia pueda sentirse escuchada, acompañada y segura.
+          Cada vestido, velo y accesorio es seleccionado con cuidado
+          para ayudar a crear un look que refleje la esencia de quien
+          lo lleva.
+        </p>
+
+      </article>
+
+
+
+      <!-- PROMESA -->
+
+      <article class="about-value-card reveal">
+
+        <span class="about-value-number">
+          03
+        </span>
+
+        <p class="eyebrow">
+          Nuestra Promesa
+        </p>
+
+        <h3>
+          Acompañarte con cercanía y dedicación.
+        </h3>
+
+        <p>
+          Prometemos acompañarte con honestidad, cercanía y
+          dedicación durante uno de los momentos más importantes
+          antes de tu boda. Queremos que al decir sí a tu vestido,
+          también digas sí a una experiencia que recordarás con cariño.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BRAND QUOTE
+========================================================= -->
+
+<section class="about-quote-section">
+
+  <div class="section-container">
+
+    <blockquote class="about-editorial-quote reveal">
+
+      <span class="quote-mark">
+        “
+      </span>
+
+      <p>
+        Cada historia de amor merece
+        un vestido inolvidable.
+      </p>
+
+      <span class="quote-signature">
+        D'Leon Designs
+      </span>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE PRINCIPLES
+========================================================= -->
+
+<section class="experience-section about-experience-section">
+
+  <div class="section-container">
+
+
+    <div class="experience-heading reveal">
+
+      <p class="eyebrow">
+        La Experiencia D'Leon
+      </p>
+
+      <h2>
+        Lo que queremos que
+        <span>sientas al estar aquí.</span>
+      </h2>
+
+    </div>
+
+
+
+    <div class="experience-grid">
+
+
+      <article class="experience-item reveal">
+
+        <span class="experience-number">
+          01
+        </span>
+
+        <h3>
+          Tranquilidad
+        </h3>
+
+        <p>
+          Un espacio donde puedas disfrutar el proceso
+          sin sentirte apurada ni presionada.
+        </p>
+
+      </article>
+
+
+      <article class="experience-item reveal">
+
+        <span class="experience-number">
+          02
+        </span>
+
+        <h3>
+          Confianza
+        </h3>
+
+        <p>
+          Atención pensada para que puedas explorar,
+          preguntar y tomar decisiones con seguridad.
+        </p>
+
+      </article>
+
+
+      <article class="experience-item reveal">
+
+        <span class="experience-number">
+          03
+        </span>
+
+        <h3>
+          Cercanía
+        </h3>
+
+        <p>
+          Un acompañamiento personal que reconoce
+          que cada novia y cada historia son diferentes.
+        </p>
+
+      </article>
+
+
+      <article class="experience-item reveal">
+
+        <span class="experience-number">
+          04
+        </span>
+
+        <h3>
+          Emoción
+        </h3>
+
+        <p>
+          Porque encontrar el vestido también forma
+          parte de la historia que estás comenzando.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="bridal-cta">
+
+  <div class="bridal-cta-inner reveal">
+
+    <p class="eyebrow">
+      Vive la experiencia
+    </p>
+
+    <h2>
+      Tu historia merece
+      <span>un momento especial.</span>
+    </h2>
+
+    <p>
+      Conoce nuestra colección y reserva una experiencia
+      bridal privada creada para acompañarte en este momento.
+    </p>
+
+
+    <div class="cta-actions">
+
+      <a
+        href="services.html"
+        class="btn btn-light"
+      >
+        Ver experiencias
+      </a>
+
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20quiero%20agendar%20una%20experiencia%20bridal%20con%20D%27Leon%20Designs."
+        class="btn btn-outline-light"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reservar por WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+  <div class="section-container footer-grid">
+
+
+    <!-- BRAND -->
+
+    <div class="footer-brand">
+
+      <a
+        href="index.html"
+        class="footer-logo"
+      >
+        D'Leon Designs
+      </a>
+
+      <p>
+        Private Bridal Studio
+      </p>
+
+      <span>
+        Quito, Ecuador
+      </span>
+
+    </div>
+
+
+
+    <!-- EXPLORE -->
+
+    <div class="footer-column">
+
+      <h3>
+        Explora
+      </h3>
+
+      <a href="dresses.html">
+        Vestidos
+      </a>
+
+      <a href="veils.html">
+        Velos
+      </a>
+
+      <a href="accessories.html">
+        Accesorios
+      </a>
+
+      <a href="services.html">
+        Servicios
+      </a>
+
+    </div>
+
+
+
+    <!-- D'LEON -->
+
+    <div class="footer-column">
+
+      <h3>
+        D'Leon
+      </h3>
+
+      <a href="about.html">
+        Nuestra Esencia
+      </a>
+
+      <a href="contact.html">
+        Contacto
+      </a>
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <div class="footer-column footer-contact">
+
+      <h3>
+        Reserva
+      </h3>
+
+      <a href="mailto:designsdleon@gmail.com">
+        designsdleon@gmail.com
+      </a>
+
+      <a
+        href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        +593 98 536 5883
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="section-container footer-bottom">
+
+    <p>
+      © <span id="currentYear"></span> D'Leon Designs.
+      Todos los derechos reservados.
+    </p>
+
+
+    <div class="footer-social-icons">
+
+      <a
+        href="https://www.instagram.com/designsdleon/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de D'Leon Designs"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dleondesigns"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok de D'Leon Designs"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+    </div>
 
   </div>
 
 </footer>
 
-<a class="floating-whatsapp"
-   href="https://api.whatsapp.com/send?phone=5930985365883&text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
-   target="_blank">
 
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/593985365883?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20D%27Leon%20Designs."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar D'Leon Designs por WhatsApp"
+>
   <i class="fa-brands fa-whatsapp"></i>
-
 </a>
 
-<script>
 
-  function toggleMenu() {
 
-    document.getElementById("navMenu").classList.toggle("show-menu");
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
-  }
+<script src="js/script.js"></script>
 
-</script>
 
 </body>
+
 </html>
