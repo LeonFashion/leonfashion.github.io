@@ -1,423 +1,2069 @@
+/* =========================================================
+   D'LEON DESIGNS
+   LUXURY BRIDAL DESIGN SYSTEM
+========================================================= */
+
+:root {
+
+  --ivory: #f8f5ef;
+  --ivory-soft: #fcfaf6;
+  --cream: #f1ece3;
+
+  --white: #ffffff;
+
+  --espresso: #241d19;
+  --espresso-soft: #3b312b;
+
+  --text: #2f2925;
+  --text-soft: #746b64;
+  --text-light: #a79e96;
+
+  --champagne: #b99a63;
+  --champagne-dark: #957748;
+  --champagne-soft: #e8dcc4;
+
+  --border: rgba(69, 56, 48, 0.13);
+  --border-gold: rgba(185, 154, 99, 0.42);
+
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1ebe5d;
+
+  --max-width: 1240px;
+
+  --shadow-soft:
+    0 14px 38px rgba(47, 41, 37, 0.06);
+
+  --shadow-medium:
+    0 22px 52px rgba(47, 41, 37, 0.10);
+
+  --transition:
+    0.35s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
+  width: 100%;
   margin: 0;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  background: #faf7f2;
-  color: #2b2118;
+
+  overflow-x: hidden;
+
+  background: var(--ivory);
+
+  color: var(--text);
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.home-page {
-  font-family: "Parisienne", "Great Vibes", cursive;
+body,
+button,
+input,
+textarea,
+select {
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
 }
 
-nav {
-  background: #000000;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-weight: 500;
+}
+
+h1 {
+  font-size:
+    clamp(4.2rem, 8vw, 7.4rem);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size:
+    clamp(3rem, 5vw, 5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size:
+    clamp(2rem, 3vw, 2.6rem);
+
+  line-height: 1.05;
+}
+
+p {
+  color: var(--text-soft);
+}
+
+
+/* =========================================================
+   GENERAL CONTAINERS
+========================================================= */
+
+.section-container {
+  width:
+    min(calc(100% - 48px), var(--max-width));
+
+  margin: 0 auto;
+}
+
+.section {
+  padding:
+    110px 7%;
+}
+
+.section-heading {
+  max-width: 780px;
+
+  margin:
+    0 auto 60px;
+
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin:
+    12px 0 22px;
+}
+
+.section-heading h2 span {
+  display: block;
+
+  color: var(--champagne-dark);
+}
+
+.section-heading > p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+  margin: 0;
+
+  color: var(--champagne-dark);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.19em;
+
+  text-transform: uppercase;
+}
+
+.hero-eyebrow {
+  color: var(--champagne-soft);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  min-height: 52px;
+
+  padding:
+    14px 27px;
+
+  display: inline-flex;
+
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 9px;
+
+  border:
+    1px solid transparent;
+
+  border-radius: 0;
+
+  cursor: pointer;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.btn:hover {
+  transform:
+    translateY(-3px);
+}
+
+.btn-light {
+  background: var(--ivory-soft);
+
+  color: var(--espresso);
+
+  border-color:
+    var(--ivory-soft);
+}
+
+.btn-light:hover {
+  background: white;
+
+  box-shadow:
+    0 14px 32px
+    rgba(0, 0, 0, 0.14);
+}
+
+.btn-dark {
+  background: var(--espresso);
+
+  color: white;
+
+  border-color: var(--espresso);
+}
+
+.btn-dark:hover {
+  background: #372c26;
+
+  border-color: #372c26;
+}
+
+.btn-outline-light {
+  background: transparent;
+
+  color: white;
+
+  border-color:
+    rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-light:hover {
+  background: white;
+
+  color: var(--espresso);
+
+  border-color: white;
+}
+
+
+/* Legacy button support */
+.btn.primary {
+  background: var(--champagne);
+
+  color: var(--espresso);
+}
+
+.btn.secondary {
+  background: transparent;
+
+  color: var(--espresso);
+
+  border-color: var(--espresso);
+}
+
+
+/* =========================================================
+   TEXT LINKS
+========================================================= */
+
+.text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  color: var(--espresso);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+.text-link span {
+  transition:
+    transform var(--transition);
+}
+
+.text-link:hover span {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   NEW HEADER
+========================================================= */
+
+.site-header {
+  width: 100%;
+
+  min-height: 94px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1200;
+
+  background:
+    rgba(248, 245, 239, 0.96);
+
+  border-bottom:
+    1px solid var(--border);
+
+  backdrop-filter:
+    blur(16px);
+
+  transition:
+    box-shadow var(--transition),
+    background var(--transition);
+}
+
+.site-header.scrolled {
+  background:
+    rgba(248, 245, 239, 0.99);
+
+  box-shadow:
+    0 12px 35px
+    rgba(47, 41, 37, 0.08);
+}
+
+.nav-container {
+  width:
+    min(calc(100% - 48px), 1380px);
+
+  min-height: 94px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+
+/* =========================================================
+   NEW BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  flex-shrink: 0;
+}
+
+.brand-name {
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+
+  line-height: 1;
+}
+
+.brand-subtitle {
+  color: var(--champagne-dark);
+
+  font-size: 0.57rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
+
+.desktop-nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap:
+    clamp(16px, 2vw, 30px);
+}
+
+.desktop-nav a {
   position: relative;
+
+  padding: 10px 0;
+
+  color: var(--espresso-soft);
+
+  font-size: 0.76rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.055em;
+
+  white-space: nowrap;
+
+  transition:
+    color var(--transition);
+}
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 2px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--champagne);
+
+  transition:
+    width var(--transition);
+}
+
+.desktop-nav a:hover {
+  color: var(--champagne-dark);
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  flex-shrink: 0;
+}
+
+.header-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.header-socials a {
+  color: var(--espresso);
+
+  font-size: 1.05rem;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.header-socials a:hover {
+  color: var(--champagne-dark);
+
+  transform:
+    translateY(-2px);
+}
+
+.header-cta {
+  padding:
+    11px 18px;
+
+  color: white;
+
+  background: var(--espresso);
+
+  border:
+    1px solid var(--espresso);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.header-cta:hover {
+  background: var(--champagne-dark);
+
+  border-color: var(--champagne-dark);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.menu-toggle {
+  width: 44px;
+  height: 44px;
+
+  display: none;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 1px;
+
+  display: block;
+
+  background: var(--espresso);
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.menu-toggle.active span:first-child {
+  transform:
+    translateY(3.5px)
+    rotate(45deg);
+}
+
+.menu-toggle.active span:last-child {
+  transform:
+    translateY(-3.5px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+
+  width: 100%;
+
+  position: absolute;
+
+  top: 94px;
+  left: 0;
+
+  padding:
+    30px 24px 36px;
+
+  background: var(--ivory-soft);
+
+  border-top:
+    1px solid var(--border);
+
+  box-shadow:
+    0 20px 45px
+    rgba(47, 41, 37, 0.10);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu nav {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.mobile-menu nav a {
+  padding:
+    14px 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.8rem;
+}
+
+.mobile-menu-footer {
+  margin-top: 28px;
+}
+
+.mobile-menu-footer .btn {
+  width: 100%;
+}
+
+.mobile-socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 24px;
+
+  margin-top: 24px;
+}
+
+.mobile-socials a {
+  font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   NEW HERO
+========================================================= */
+
+.hero {
+  min-height:
+    calc(100vh - 94px);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: white;
+
+  text-align: center;
+
+  background:
+    url("images/weddingdressbackground.jpg");
+
+  background-size: cover;
+
+  background-position:
+    center 10%;
+
+  background-repeat: no-repeat;
+}
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    url("images/weddingdressbackground.jpg");
+
+  background-size: cover;
+
+  background-position:
+    center 10%;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 22, 18, 0.34),
+      rgba(28, 22, 18, 0.57)
+    );
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(calc(100% - 48px), 900px);
+
+  padding:
+    100px 0;
+}
+
+.hero-content h1 {
+  margin:
+    17px auto 28px;
+
+  color: white;
+}
+
+.hero-content h1 span {
+  display: block;
+
+  color: #eadbbf;
+}
+
+.hero-description {
+  max-width: 680px;
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 36px;
+}
+
+.hero-details {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 44px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 0.67rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+.detail-divider {
+  width: 22px;
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section {
+  padding:
+    120px 24px;
+
+  background: var(--ivory-soft);
+}
+
+.intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.intro-heading h2 {
+  margin:
+    14px 0 0;
+}
+
+.intro-heading h2 span {
+  color: var(--champagne-dark);
+}
+
+.intro-copy {
+  max-width: 650px;
+}
+
+.intro-copy p {
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+.intro-lead {
+  color: var(--espresso) !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.8rem !important;
+
+  line-height: 1.35 !important;
+}
+
+
+/* =========================================================
+   COLLECTION SECTION
+========================================================= */
+
+.collection-section {
+  padding:
+    120px 24px;
+
+  background: var(--ivory);
+}
+
+.collection-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   NEW FULL PRODUCT CARDS
+========================================================= */
+
+.collection-card,
+.product-card {
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  color: inherit;
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.collection-card:hover,
+.product-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    var(--border-gold);
+
+  box-shadow:
+    var(--shadow-medium);
+}
+
+
+/* Image container */
+.collection-image,
+.product-card-image {
+  height: 500px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 22px;
+
+  background:
+    #f5f2ed;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+/*
+  IMPORTANT:
+  contain preserves the entire product image.
+  We are intentionally not cropping dresses, veils or accessories.
+*/
+.collection-image img,
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  transition:
+    transform 0.55s ease;
+}
+
+.collection-card:hover
+.collection-image img,
+.product-card:hover
+.product-card-image img {
+  transform:
+    scale(1.025);
+}
+
+
+/* Number overlay */
+.collection-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 255, 255, 0.93);
+
+  border:
+    1px solid var(--border);
+
+  color: var(--espresso);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+
+/* Full card copy */
+.collection-card-copy,
+.product-card-content {
+  min-height: 180px;
+
+  padding:
+    27px 30px 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.collection-label,
+.product-card-category {
+  margin:
+    0 0 7px;
+
+  color: var(--champagne-dark);
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.collection-card-copy h3,
+.product-card-content h3 {
+  margin: 0;
+
+  color: var(--espresso);
+
+  font-size: 2.4rem;
+}
+
+.collection-arrow {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid var(--border);
+
+  color: var(--espresso);
+
+  font-size: 1rem;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.collection-card:hover
+.collection-arrow {
+  background: var(--espresso);
+
+  color: white;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* Alternate detailed product-card format */
+.product-card-content {
+  display: block;
+
+  min-height: auto;
+}
+
+.product-card-content p {
+  margin:
+    0 0 22px;
+
+  color: var(--text-soft);
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+.product-card-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--espresso);
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+  padding:
+    120px 24px;
+
+  background: var(--espresso);
+}
+
+.experience-heading {
+  max-width: 760px;
+
+  margin-bottom: 65px;
+}
+
+.experience-heading .eyebrow {
+  color: var(--champagne-soft);
+}
+
+.experience-heading h2 {
+  margin:
+    14px 0 0;
+
+  color: white;
+}
+
+.experience-heading h2 span {
+  display: block;
+
+  color: var(--champagne-soft);
+}
+
+.experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.experience-item {
+  min-height: 280px;
+
+  padding:
+    38px 28px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.experience-item:last-child {
+  border-right: none;
+}
+
+.experience-number {
+  display: block;
+
+  margin-bottom: 48px;
+
+  color: var(--champagne);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+.experience-item h3 {
+  margin-bottom: 14px;
+
+  color: white;
+
+  font-size: 2.2rem;
+}
+
+.experience-item p {
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-section {
+  padding:
+    130px 24px;
+
+  background: var(--ivory-soft);
+}
+
+.story-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.65fr 1.35fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.story-number {
+  color:
+    rgba(185, 154, 99, 0.24);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(9rem, 18vw, 18rem);
+
+  line-height: 0.7;
+}
+
+.story-content {
+  max-width: 700px;
+}
+
+.story-content h2 {
+  margin:
+    14px 0 28px;
+}
+
+.story-content h2 span {
+  color: var(--champagne-dark);
+}
+
+.story-content p {
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+.story-lead {
+  color: var(--espresso) !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.65rem !important;
+
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   BRIDAL CTA
+========================================================= */
+
+.bridal-cta {
+  padding:
+    125px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2d2420,
+      #1d1815
+    );
+
+  color: white;
+
+  text-align: center;
+}
+
+.bridal-cta-inner {
+  max-width: 820px;
+
+  margin: 0 auto;
+}
+
+.bridal-cta .eyebrow {
+  color: var(--champagne-soft);
+}
+
+.bridal-cta h2 {
+  margin:
+    14px 0 24px;
+
+  color: white;
+}
+
+.bridal-cta h2 span {
+  display: block;
+
+  color: var(--champagne-soft);
+}
+
+.bridal-cta p:not(.eyebrow) {
+  max-width: 630px;
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  line-height: 1.9;
+}
+
+.cta-actions {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+
+/* =========================================================
+   NEW FOOTER
+========================================================= */
+
+.site-footer {
+  padding:
+    75px 24px 28px;
+
+  background: #15110f;
+
+  color: white;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr repeat(3, 1fr);
+
+  gap: 65px;
+
+  padding-bottom: 55px;
+}
+
+.footer-logo {
+  color: white;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 2.25rem;
+
+  font-weight: 500;
+}
+
+.footer-brand p {
+  margin:
+    6px 0;
+
+  color: var(--champagne);
+
+  font-size: 0.62rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.footer-brand span {
+  color:
+    rgba(255, 255, 255, 0.6);
+
+  font-size: 0.8rem;
+}
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.footer-column h3 {
+  margin-bottom: 9px;
+
+  color: white;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 0.82rem;
+
+  transition:
+    color var(--transition);
+}
+
+.footer-column a:hover {
+  color: var(--champagne);
+}
+
+.footer-bottom {
+  padding-top: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 0.7rem;
+}
+
+.footer-social-icons {
+  display: flex;
+
+  gap: 16px;
+}
+
+.footer-social-icons a {
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 1.05rem;
+
+  transition:
+    color var(--transition);
+}
+
+.footer-social-icons a:hover {
+  color: var(--champagne);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.floating-whatsapp {
+  width: 60px;
+  height: 60px;
+
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 1500;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--whatsapp);
+
+  color: white;
+
+  font-size: 1.75rem;
+
+  box-shadow:
+    0 12px 28px
+    rgba(0, 0, 0, 0.22);
+
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.floating-whatsapp:hover {
+  background: var(--whatsapp-dark);
+
+  transform:
+    translateY(-4px)
+    scale(1.04);
+
+  box-shadow:
+    0 17px 35px
+    rgba(0, 0, 0, 0.26);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   LEGACY SUPPORT
+   Keeps older pages functional while we update them.
+========================================================= */
+
+
+/* OLD NAV */
+body > nav {
+  padding:
+    18px 5%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  position: relative;
+
   z-index: 1000;
+
+  background: var(--espresso);
 }
 
 .logo-area {
   display: flex;
+
   align-items: center;
+
   gap: 14px;
 }
 
 .logo {
-  color: #e0c46b;
-  font-size: 34px;
-  font-weight: bold;
-  font-family: "Parisienne", "Great Vibes", cursive;
-  text-decoration: none;
+  color: var(--champagne);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 2.2rem;
+
+  font-weight: 600;
 }
 
 .top-social-icon {
-  color: #e0c46b;
-  font-size: 28px;
-  transition: color 0.3s ease;
+  color: var(--champagne);
+
+  font-size: 1.3rem;
 }
 
-.top-social-icon:hover {
-  color: white;
+body > nav .menu-toggle {
+  display: flex;
 }
 
-.menu-toggle {
-  background: none;
-  border: none;
-  color: #e0c46b;
-  font-size: 32px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-.menu-toggle:hover {
-  transform: scale(1.08);
-}
-
-/* FLOATING POPUP MENU */
-
+/* OLD POPUP NAV */
 .nav-menu {
   display: none;
+
+  min-width: 260px;
+
   position: absolute;
+
   top: 78px;
-  right: 40px;
-  background: #000000;
-  border: 1px solid #e0c46b;
-  border-radius: 24px;
-  padding: 24px 38px;
+  right: 5%;
+
+  padding:
+    24px 30px;
+
+  background: var(--espresso);
+
+  border:
+    1px solid var(--champagne);
+
+  box-shadow:
+    0 18px 38px
+    rgba(0, 0, 0, 0.25);
+
   text-align: center;
-  z-index: 2000;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
-  min-width: 240px;
+}
+
+.nav-menu.show-menu {
+  display: block;
 }
 
 .nav-menu a {
   display: block;
+
+  padding:
+    10px 0;
+
   color: white;
-  text-decoration: none;
-  font-size: 30px;
-  margin: 16px 0;
-  font-family: "Parisienne", "Great Vibes", cursive;
-  transition: color 0.3s ease;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.55rem;
 }
 
 .nav-menu a:hover {
-  color: #e0c46b;
+  color: var(--champagne);
 }
 
-.show-menu {
-  display: block;
-}
 
-.hero {
-  height: 85vh;
-  background:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("images/weddingdressbackground.jpg");
-  background-size: cover;
-  background-position: center 8%;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* OLD SECTION TEXT */
+.section > h2 {
   text-align: center;
-  color: white;
 }
 
-.hero-box {
+.section > p {
   max-width: 850px;
-  padding: 20px;
-}
 
-h1 {
-  font-size: 76px;
-  margin-bottom: 15px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-}
+  margin:
+    0 auto;
 
-h2 {
-  font-size: 52px;
-  margin-bottom: 20px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-}
+  color: var(--text-soft);
 
-h3 {
-  font-size: 34px;
-  margin-bottom: 10px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-}
+  font-size: 1rem;
 
-.subtitle {
-  font-size: 34px;
-  margin-bottom: 35px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-}
-
-.section {
-
-  padding: 90px 14%;
+  line-height: 1.9;
 
   text-align: center;
-
 }
 
-.section p {
 
-  font-size: 26px;
-
-  line-height: 2;
-
-  max-width: 900px;
-
-  margin-left: auto;
-
-  margin-right: auto;
-
-}
-
+/* OLD ABOUT HOME */
 .about-container {
-  margin: 60px auto 70px;
   max-width: 850px;
+
+  margin:
+    65px auto 75px;
+
   text-align: center;
 }
 
 .about-title {
-  font-family: "Great Vibes", "Parisienne", cursive;
-  font-size: 70px;
-  color: #e0c46b;
-  margin-bottom: 25px;
-  font-weight: normal;
+  margin-bottom: 24px;
+
+  color: var(--champagne-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 3.8rem;
+
+  font-weight: 500;
 }
 
 .about-text {
-  font-size: 30px;
-  line-height: 1.8;
-  color: #2b2118;
-  margin-bottom: 20px;
+  color: var(--text-soft);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
 }
 
+
+/* OLD GRIDS */
 .grid,
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 45px;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 32px;
+
+  margin-top: 50px;
 }
 
-.home-card-centered {
-  grid-column: 1 / 3;
+.home-card-centered,
+.contact-card-centered {
+  grid-column:
+    1 / 3;
+
   width: 50%;
+
   justify-self: center;
 }
 
+
+/* =========================================================
+   LEGACY CARD DESIGN — NOW FULL ENCLOSED CARDS
+========================================================= */
+
 .card {
-  background: transparent;
-  border-radius: 32px;
+  height: 100%;
+
   overflow: hidden;
-  transition: transform 0.3s ease;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-7px);
+
+  border-color:
+    var(--border-gold);
+
+  box-shadow:
+    var(--shadow-medium);
 }
 
-.card-img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 32px;
-  overflow: hidden;
-  margin-bottom: 18px;
-  transition: transform 0.4s ease;
-  display: block;
-  background-color: #f5f5f5;
-}
 
+/* Legacy images are now contained INSIDE the card */
+.card-img,
 .home-card-img {
   width: 100%;
-  height: 420px;
+  height: 470px;
+
+  margin: 0;
+
+  padding: 18px;
+
   object-fit: contain;
-  object-position: center center;
-  background-color: #f5f5f5;
-  padding: 14px;
-  box-sizing: border-box;
-  border-radius: 32px;
-  display: block;
+
+  object-position: center;
+
+  background: #f5f2ed;
+
+  border-radius: 0;
+
+  border-bottom:
+    1px solid var(--border);
+
+  transition:
+    transform 0.5s ease;
 }
 
-.card img {
-  border-radius: 32px;
+.card:hover
+.card-img,
+.card:hover
+.home-card-img {
+  transform:
+    scale(1.02);
 }
 
-.dress-image-wrap,
-.flip-card {
-  width: 100%;
-  height: 500px;
-  perspective: 1200px;
-  border-radius: 32px;
-  overflow: hidden;
-  background-color: #f5f5f5;
+
+/* Legacy product name/content stays visually inside card */
+.card h3 {
+  margin:
+    27px 28px 8px;
+
+  color: var(--espresso);
+
+  font-size: 2.2rem;
+
+  text-align: left;
 }
 
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-}
+.card > p,
+.card div > p {
+  margin:
+    0 28px 30px;
 
-.flip-card:hover .flip-inner {
-  transform: rotateY(180deg);
-}
+  color: var(--text-soft);
 
-.flip-front,
-.flip-back {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 32px;
-  overflow: hidden;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
+  font-size: 0.9rem;
 
-.flip-front {
-  transform: rotateY(0deg);
-}
+  line-height: 1.7;
 
-.flip-back {
-  transform: rotateY(180deg);
-}
-
-.flip-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  background-color: #f5f5f5;
-  border-radius: 32px;
-  display: block;
+  text-align: left;
 }
 
 .card-link,
 .card-link:visited,
 .card-link:hover,
 .card-link:active {
-  text-decoration: none;
-  color: inherit;
+  height: 100%;
+
   display: block;
-}
 
-.card-link h3,
-.card-link p {
-  text-decoration: none !important;
-  color: #2b2118;
-  border-bottom: none !important;
-}
+  color: inherit;
 
-.card-link h3 {
-  font-size: 34px;
-  margin-bottom: 8px;
-}
-
-.card-link p {
-  font-size: 26px;
+  text-decoration: none;
 }
 
 .card-link:hover h3 {
-  color: #e0c46b;
+  color: var(--champagne-dark);
 }
 
+
+/* =========================================================
+   FLIP PRODUCT CARDS — LEGACY COLLECTION PAGES
+========================================================= */
+
+.dress-image-wrap,
+.flip-card {
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  perspective: 1200px;
+
+  background: #f5f2ed;
+
+  border-radius: 0;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  transition:
+    transform 0.8s ease;
+
+  transform-style:
+    preserve-3d;
+}
+
+.flip-card:hover
+.flip-inner {
+  transform:
+    rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+}
+
+.flip-front {
+  transform:
+    rotateY(0deg);
+}
+
+.flip-back {
+  transform:
+    rotateY(180deg);
+}
+
+.flip-img {
+  width: 100%;
+  height: 100%;
+
+  padding: 18px;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #f5f2ed;
+
+  border-radius: 0;
+}
+
+
+/* Placeholder */
 .image-placeholder {
   height: 500px;
-  background: #e8ded3;
-  border: 2px dashed #b89f84;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  color: #7a6756;
-  margin-bottom: 18px;
-  font-size: 26px;
-  font-family: "Parisienne", "Great Vibes", cursive;
-  border-radius: 32px;
-  overflow: hidden;
-}
 
-.btn {
-  background: #e0c46b;
-  color: #000000;
-  padding: 14px 30px;
-  text-decoration: none;
-  border-radius: 40px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 10px;
-  font-size: 24px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-}
+  padding: 30px;
 
-.btn:hover {
+  background: #eee8df;
 
-  background: #d4af37;
+  border:
+    1px dashed var(--champagne);
 
-  transform: translateY(-3px);
+  color: var(--text-soft);
 
-  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
 
-}
+  font-size: 1.8rem;
 
-footer {
-  background: #000000;
-  color: white;
   text-align: center;
-  padding: 40px;
-  margin-top: 80px;
-}
-
-footer p {
-  font-size: 24px;
-}
-
-footer a {
-  color: #e0c46b;
-  text-decoration: none;
-}
-
-.footer-socials {
-  margin-top: 20px;
-}
-
-.footer-socials a {
-  color: #e0c46b;
-  font-size: 30px;
-  margin: 0 12px;
-  transition: color 0.3s ease;
-}
-
-.footer-socials a:hover {
-  color: white;
-}
-
-.floating-whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  background: #25D366;
-  color: white;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 34px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
-  z-index: 999;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.floating-whatsapp:hover {
-  transform: scale(1.08);
-  background: #1ebe5d;
 }
 
 .flip-note {
-  font-size: 20px;
-  color: #7a6756;
   margin-top: 10px;
+
+  color: var(--text-soft);
+
+  font-size: 0.8rem;
 }
+
+
+/* =========================================================
+   SOCIAL LEGACY
+========================================================= */
 
 .social-section {
   margin-top: 80px;
@@ -425,191 +2071,498 @@ footer a {
 
 .social-icons {
   display: flex;
+
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+
+  gap: 28px;
+
+  margin-top: 24px;
 }
 
 .social-icons a {
-  color: #000000;
-  font-size: 48px;
-  transition: color 0.3s ease;
+  color: var(--espresso);
+
+  font-size: 2rem;
 }
 
 .social-icons a:hover {
-  color: #e0c46b;
+  color: var(--champagne-dark);
 }
 
-.contact-card-centered {
-  grid-column: 1 / 3;
-  width: 50%;
-  justify-self: center;
-}
 
-/* =========================
-   ABOUT PAGE
-========================= */
+/* =========================================================
+   ABOUT PAGE LEGACY
+========================================================= */
 
 .about-logo {
-
   width: 280px;
+
   max-width: 85%;
-  cursor: pointer;
+
   display: block;
 
-  margin: 50px auto 70px auto;
+  margin:
+    50px auto 70px;
 
-  transition: transform .35s ease;
-
+  transition:
+    transform var(--transition);
 }
 
 .about-logo:hover {
-
-  transform: scale(1.04);
-
+  transform:
+    scale(1.03);
 }
 
 .about-section {
-
   max-width: 950px;
 
-  margin: 0 auto 75px auto;
-
+  margin:
+    0 auto 75px;
 }
 
 .about-section h2 {
-
-  color: #c8a14d;
-
   margin-bottom: 20px;
 
+  color: var(--champagne-dark);
 }
 
 .about-section p {
+  color: var(--text-soft);
 
-  font-size: 28px;
+  font-size: 1rem;
 
-  line-height: 2;
-
+  line-height: 1.9;
 }
 
 .about-quote {
-
   max-width: 900px;
 
-  margin: 80px auto 60px auto;
+  margin:
+    80px auto 60px;
 
-  font-family: "Parisienne","Great Vibes",cursive;
+  color: var(--champagne-dark);
 
-  font-size: 58px;
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
 
-  color: #c8a14d;
+  font-size:
+    clamp(2.6rem, 5vw, 4.2rem);
 
-  line-height: 1.4;
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LEGACY FOOTER
+========================================================= */
+
+body > footer:not(.site-footer) {
+  margin-top: 80px;
+
+  padding:
+    50px 24px;
+
+  background: #15110f;
+
+  color: white;
+
+  text-align: center;
+}
+
+body > footer:not(.site-footer) p {
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 0.85rem;
+}
+
+body > footer:not(.site-footer) a {
+  color: var(--champagne);
+}
+
+.footer-socials {
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  margin:
+    0 10px;
+
+  color: var(--champagne);
+
+  font-size: 1.4rem;
+}
+
+.footer-socials a:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-socials {
+    display: none;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+
+  .intro-grid,
+  .story-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 55px;
+  }
+
+  .story-number {
+    display: none;
+  }
+
+
+  .experience-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .experience-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .experience-item:nth-child(-n + 2) {
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.15);
+  }
+
+
+  .footer-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
 
 }
 
-@media (max-width: 700px) {
 
-  nav {
-    text-align: center;
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .section-container {
+    width:
+      min(calc(100% - 40px), var(--max-width));
+  }
+
+
+  /* HEADER */
+
+  .site-header,
+  .nav-container {
+    min-height: 78px;
+  }
+
+  .mobile-menu {
+    top: 78px;
+  }
+
+  .brand-name {
+    font-size: 1.6rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.48rem;
+
+    letter-spacing: 0.16em;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height:
+      calc(100svh - 78px);
+
+    background-position:
+      center top;
+  }
+
+  .hero-background {
+    background-position:
+      center top;
+  }
+
+  .hero-content {
+    width:
+      calc(100% - 40px);
+
+    padding:
+      90px 0;
+  }
+
+  .hero-content h1 {
+    font-size:
+      clamp(3.7rem, 17vw, 5.2rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-details {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .detail-divider {
+    display: none;
+  }
+
+
+  /* GENERAL */
+
+  .intro-section,
+  .collection-section,
+  .experience-section,
+  .story-section,
+  .bridal-cta {
+    padding:
+      85px 20px;
+  }
+
+  .section {
+    padding:
+      80px 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+
+  /* COLLECTION */
+
+  .collection-grid,
+  .grid,
+  .home-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 25px;
+  }
+
+  .collection-image,
+  .product-card-image {
+    height: 430px;
+  }
+
+  .collection-card-copy {
+    min-height: 150px;
+
+    padding:
+      24px;
+  }
+
+  .collection-card-copy h3,
+  .product-card-content h3 {
+    font-size: 2rem;
+  }
+
+  .card-img,
+  .home-card-img {
+    height: 420px;
+  }
+
+  .card h3 {
+    margin:
+      24px 22px 8px;
+
+    font-size: 2rem;
+  }
+
+  .card > p,
+  .card div > p {
+    margin:
+      0 22px 25px;
+  }
+
+
+  /* EXPERIENCE */
+
+  .experience-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .experience-item {
+    min-height: auto;
+
+    padding:
+      35px 5px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.15);
+  }
+
+  .experience-item:last-child {
+    border-bottom: none;
+  }
+
+  .experience-number {
+    margin-bottom: 25px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  /* WHATSAPP */
+
+  .floating-whatsapp {
+    width: 56px;
+    height: 56px;
+
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 1.55rem;
+  }
+
+
+  /* LEGACY NAV */
+
+  body > nav {
     justify-content: center;
-    padding: 15px;
+
+    padding:
+      15px 20px;
+
+    text-align: center;
   }
 
   .logo-area {
     width: 100%;
+
     justify-content: center;
-    margin-bottom: 10px;
   }
 
-  .menu-toggle {
-    margin-top: 8px;
+  .logo {
+    font-size: 1.8rem;
   }
 
   .nav-menu {
-    top: 85px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 72%;
-    padding: 24px 20px;
+    width: calc(100% - 40px);
+
+    top: 80px;
+    right: 20px;
+
+    padding:
+      22px;
   }
 
   .nav-menu a {
-    font-size: 26px;
-    margin: 14px 0;
+    font-size: 1.5rem;
   }
 
-  .hero {
-    background-position: center 5%;
-  }
 
-  h1 {
-    font-size: 52px;
-  }
-
-  h2 {
-    font-size: 42px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  .subtitle {
-    font-size: 28px;
-  }
-
-  .section {
-    padding: 60px 8%;
-  }
-
-  .section p {
-    font-size: 24px;
-  }
-
-  .grid,
-  .home-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
+  /* LEGACY GRID */
 
   .home-card-centered,
   .contact-card-centered {
-    grid-column: auto;
     width: 100%;
+
+    grid-column: auto;
   }
 
-  .card-img,
-  .home-card-img,
-  .flip-inner,
+  .dress-image-wrap,
   .flip-card,
   .image-placeholder {
-    height: 380px;
+    height: 420px;
   }
 
-  .about-title {
-    font-size: 56px;
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+
+  .brand-name {
+    font-size: 1.45rem;
   }
 
-  .about-text {
-    font-size: 24px;
+  .hero-content h1 {
+    font-size: 3.6rem;
   }
 
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    font-size: 18px;
+  .collection-image,
+  .product-card-image,
+  .card-img,
+  .home-card-img,
+  .dress-image-wrap,
+  .flip-card {
+    height: 370px;
   }
 
-  .social-icons a {
-    font-size: 40px;
+  .collection-card-copy {
+    padding:
+      22px 20px;
   }
 
-  .floating-whatsapp {
-    width: 58px;
-    height: 58px;
-    font-size: 30px;
+  .collection-arrow {
+    width: 38px;
+    height: 38px;
   }
+
 }
